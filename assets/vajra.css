@@ -1,0 +1,180 @@
+/* ============================================================
+   Prapti Labs — Project Vajra
+   Stylesheet v3 — red-700 · improved contrast · larger type
+   ============================================================ */
+
+/* ---------- CSS variables ---------- */
+:root {
+  --red:    #b91c1c;
+  --red-h:  #991b1b;
+  --red-d:  #7f1d1d;
+  --carbon: #0c0c0e;
+  --surface:#18181b;
+  --border: rgba(255,255,255,0.07);
+  --steel:  #cbd5e1;   /* slate-300 — 5.4:1 contrast */
+  --muted:  rgba(203,213,225,0.80); /* 3.8:1 contrast */
+}
+
+/* ---------- Base reset ---------- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+body {
+  background-color: var(--carbon);
+  color: var(--steel);
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  font-size: 16px;
+  line-height: 1.7;
+}
+::selection { background: rgba(185,28,28,0.35); }
+
+/* ---------- Typography utilities ---------- */
+.mono       { font-family: 'JetBrains Mono', monospace; }
+.accent     { color: var(--red); }
+.text-white { color: #fff; }
+.text-muted { color: var(--muted); }
+
+/* ---------- Navigation ---------- */
+.nav-blur {
+  background: rgba(12,12,14,0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+
+/* ---------- Panels / cards ---------- */
+.panel {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid var(--border);
+  transition: border-color 0.25s ease, background 0.25s ease;
+}
+.panel:hover {
+  border-color: rgba(185,28,28,0.25);
+  background: rgba(255,255,255,0.05);
+}
+.panel-accent {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--red);
+}
+
+/* ---------- Buttons ---------- */
+.btn-primary {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: var(--red); color: #fff;
+  font-size: 12px; font-weight: 700;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  padding: 11px 22px; border-radius: 4px;
+  border: none; cursor: pointer; text-decoration: none;
+  transition: background 0.2s ease;
+}
+.btn-primary:hover  { background: var(--red-h); }
+.btn-primary:active { background: var(--red-d); transform: scale(0.98); }
+
+.btn-outline {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: transparent; color: var(--steel);
+  font-size: 12px; font-weight: 700;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  padding: 11px 22px; border-radius: 4px;
+  border: 1px solid #52525b; cursor: pointer; text-decoration: none;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+.btn-outline:hover { border-color: var(--red); color: #fca5a5; }
+
+/* ---------- Section headings ---------- */
+.eyebrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; font-weight: 700;
+  letter-spacing: 0.25em; text-transform: uppercase;
+  color: var(--red); margin-bottom: 14px;
+}
+.section-title {
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  font-weight: 900; color: #fff;
+  letter-spacing: -0.03em; line-height: 1.05;
+  text-transform: uppercase; font-style: italic;
+  margin-bottom: 22px;
+}
+.section-body {
+  font-size: 16px; line-height: 1.8;
+  color: var(--muted); max-width: 560px; font-weight: 300;
+}
+
+/* ---------- Stats ---------- */
+.stat-num {
+  font-size: 2.8rem; font-weight: 900; color: #fff;
+  line-height: 1; letter-spacing: -0.03em;
+}
+.stat-num.accent { color: var(--red); }
+.stat-label {
+  font-size: 12px; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--muted);
+  margin-top: 10px; line-height: 1.65;
+}
+
+/* ---------- Progress / threat bars ---------- */
+.bar-track { height: 2px; background: rgba(255,255,255,0.08); border-radius: 1px; overflow: hidden; }
+.bar-fill  { height: 2px; background: var(--red); border-radius: 1px; }
+
+/* ---------- Badges ---------- */
+.badge {
+  display: inline-flex; align-items: center; gap: 7px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; font-weight: 700;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  color: rgba(203,213,225,0.65);
+}
+
+/* ---------- Blinking cursor ---------- */
+.cursor {
+  display: inline-block; width: 2px; height: 14px;
+  background: var(--red); margin-left: 3px;
+  vertical-align: middle; animation: blink 1s infinite;
+}
+@keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+
+/* ---------- Pulse dot ---------- */
+.pulse-dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: var(--red); animation: pulse 1.5s ease-in-out infinite;
+}
+@keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.35} }
+
+/* ---------- Hero background ---------- */
+.hero-bg {
+  background:
+    linear-gradient(rgba(12,12,14,0.82), rgba(12,12,14,0.97)),
+    radial-gradient(circle at 50% -10%, rgba(185,28,28,0.07) 0%, transparent 55%);
+}
+
+/* ---------- Section dividers ---------- */
+.section-divider { border-top: 1px solid var(--border); }
+
+/* ---------- Footer ---------- */
+.footer-bg { background: #08080a; border-top: 1px solid var(--border); }
+
+/* ---------- Spec table rows ---------- */
+.spec-row {
+  display: flex; justify-content: space-between;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; font-weight: 700;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  padding: 7px 0; border-bottom: 1px solid var(--border);
+  color: #9ca3af;
+}
+.spec-row:last-child { border-bottom: none; }
+.spec-row span:last-child { color: var(--steel); }
+.spec-row span.spec-accent { color: var(--red); }
+
+/* ---------- Page spacing ---------- */
+.page-hero  { padding-top: 10rem; padding-bottom: 5rem; }
+.inner-page { padding-top: 8rem;  padding-bottom: 5rem; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .section-title { font-size: 2.2rem; }
+  .stat-num      { font-size: 2.2rem; }
+  .section-body  { font-size: 15px; }
+}

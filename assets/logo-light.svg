@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 56" fill="none">
+  <rect x="0" y="0" width="52" height="52" rx="8.0" fill="rgba(185,28,28,0.07)" stroke="#b91c1c" stroke-width="1.5"/>
+  <path d="M11.0 9.0 L11.0 43.0 M11.0 9.0 L24.0 9.0 Q33.0 9.0 33.0 17.0 Q33.0 25.0 24.0 25.0 L11.0 25.0"
+        stroke="#111827" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <circle cx="37.0" cy="37.0" r="3.0" fill="#ef4444"/>
+  <text x="68" y="24" font-family="Inter, system-ui, sans-serif" font-weight="900" font-size="19" letter-spacing="2" word-spacing="8" fill="#111827">PRAPTI LABS</text>
+  <line x1="68" y1="32" x2="104" y2="32" stroke="#b91c1c" stroke-width="1.5"/>
+  <text x="68" y="47" font-family="JetBrains Mono, Courier New, monospace" font-weight="700" font-size="11" letter-spacing="2.2" fill="#b91c1c">SECURITY IS CULTURE</text>
+</svg>

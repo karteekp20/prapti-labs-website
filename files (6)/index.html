@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prapti Labs | Project Vajra — Sovereign PQC Gateway</title>
+  <meta name="description" content="Prapti Labs builds Project Vajra — India's sovereign Post-Quantum Cryptographic gateway protecting defence and financial infrastructure from quantum threats.">
+  <meta name="author" content="Pulugulla Karteek, Prapti Labs">
+  <meta property="og:title" content="Prapti Labs | Project Vajra — Sovereign PQC Gateway">
+  <meta property="og:description" content="Prapti Labs builds Project Vajra — India's sovereign Post-Quantum Cryptographic gateway protecting defence and financial infrastructure from quantum threats.">
+  <meta property="og:url" content="https://praptilabs.in/index.html">
+  <meta property="og:type" content="website">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@0.383.0/dist/umd/lucide.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/vajra.css">
+</head>
+<body>
+<nav class="fixed top-0 w-full z-50 nav-blur">
+  <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+    <a href="index.html" class="flex items-center" style="text-decoration:none">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 56" fill="none" height="44" style="display:block">
+        <rect x="0" y="0" width="52" height="52" rx="8" fill="rgba(185,28,28,0.18)" stroke="#b91c1c" stroke-width="1.5"/>
+        <path d="M11 9 L11 43 M11 9 L24 9 Q33 9 33 17 Q33 25 24 25 L11 25"
+              stroke="white" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <circle cx="37" cy="37" r="3" fill="#ef4444"/>
+        <text x="68" y="24" font-family="Inter, system-ui, sans-serif" font-weight="900" font-size="19" letter-spacing="2" word-spacing="8" fill="white">PRAPTI LABS</text>
+        <line x1="68" y1="32" x2="104" y2="32" stroke="#b91c1c" stroke-width="1.5"/>
+        <text x="68" y="47" font-family="JetBrains Mono, Courier New, monospace" font-weight="700" font-size="11" letter-spacing="2.2" fill="#ef4444">SECURITY IS CULTURE</text>
+      </svg>
+    </a>
+    <div class="hidden md:flex gap-10 font-bold uppercase text-zinc-500" style="font-size:12px;letter-spacing:0.3em">
+      <a href="solution.html"   class="text-zinc-300 hover:text-white transition nav-link">Solution</a>
+      <a href="use-cases.html"  class="text-zinc-300 hover:text-white transition nav-link">Use Cases</a>
+      <a href="technology.html" class="text-zinc-300 hover:text-white transition nav-link">Technology</a>
+      <a href="about.html"      class="text-zinc-300 hover:text-white transition nav-link">About</a>
+      <a href="contact.html"    class="text-zinc-300 hover:text-white transition nav-link">Contact</a>
+    </div>
+    <div class="flex items-center gap-4">
+      <a href="contact.html" class="hidden md:block mono font-bold text-white border border-zinc-700 rounded uppercase tracking-widest hover:border-red-700 hover:text-red-400 transition-all" style="font-size:12px;padding:11px 22px">Get_In_Touch</a>
+      <button id="hamburger" class="md:hidden p-2 text-zinc-400 hover:text-white">
+        <i data-lucide="menu" class="w-5 h-5"></i>
+      </button>
+    </div>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden flex-col px-6 pb-4 border-t border-white/5" style="background:var(--carbon)">
+    <a href="solution.html"   class="block py-3 mono font-bold uppercase text-zinc-300 hover:text-white transition border-b border-white/5" style="font-size:12px;letter-spacing:0.28em">Solution</a>
+    <a href="use-cases.html"  class="block py-3 mono font-bold uppercase text-zinc-300 hover:text-white transition border-b border-white/5" style="font-size:12px;letter-spacing:0.28em">Use Cases</a>
+    <a href="technology.html" class="block py-3 mono font-bold uppercase text-zinc-300 hover:text-white transition border-b border-white/5" style="font-size:12px;letter-spacing:0.28em">Technology</a>
+    <a href="about.html"      class="block py-3 mono font-bold uppercase text-zinc-300 hover:text-white transition border-b border-white/5" style="font-size:12px;letter-spacing:0.28em">About</a>
+    <a href="contact.html"    class="block py-3 mono font-bold uppercase text-zinc-300 hover:text-white transition" style="font-size:12px;letter-spacing:0.28em">Contact</a>
+  </div>
+</nav>
+<header class="hero-bg page-hero px-6">
+  <div class="max-w-6xl mx-auto">
+    <div class="inline-flex items-center gap-3 px-4 py-2 rounded bg-zinc-900 border border-zinc-800 mb-10">
+      <i data-lucide="terminal" class="accent" style="width:14px;height:14px"></i>
+      <span id="typewriter" class="mono font-bold uppercase text-zinc-400" style="font-size:10px;letter-spacing:0.3em"></span>
+      <span class="cursor"></span>
+    </div>
+    <div class="grid lg:grid-cols-12 gap-12 items-start">
+      <div class="lg:col-span-7">
+        <div class="eyebrow">Project Vajra — iDEX Open Challenge 2026</div>
+        <h1 class="section-title">India's<br>Sovereign<br><span class="accent">PQC</span><br>Gateway.</h1>
+        <p class="section-body mb-10">Project Vajra upgrades India's legacy defence and financial infrastructure to quantum-safe encryption — without replacing a single piece of hardware or changing any application code.</p>
+        <div class="flex flex-wrap gap-4 mb-10">
+          <a href="solution.html" class="btn-primary">
+            <i data-lucide="arrow-right" style="width:14px;height:14px"></i>See How It Works
+          </a>
+          <a href="contact.html" class="btn-outline">Request a Briefing</a>
+        </div>
+        <div class="flex flex-wrap gap-8">
+          <div class="badge"><i data-lucide="shield"   style="width:13px;height:13px" class="accent"></i>Post-Quantum Enabled</div>
+          <div class="badge"><i data-lucide="cpu"      style="width:13px;height:13px" class="accent"></i>Memory-Safe Rust</div>
+          <div class="badge"><i data-lucide="globe"    style="width:13px;height:13px" class="accent"></i>Aatmanirbhar Bharat</div>
+        </div>
+      </div>
+      <div class="lg:col-span-5 hidden lg:block">
+        <div class="panel-accent rounded p-8 space-y-5">
+          <div class="flex justify-between items-center">
+            <span class="mono font-bold uppercase text-white" style="font-size:12px;letter-spacing:0.22em">Tech_Stack</span>
+            <div class="pulse-dot"></div>
+          </div>
+          <div class="grid grid-cols-2 gap-2">
+            <div style="background:rgba(185,28,28,0.1);border:1px solid rgba(185,28,28,0.25);border-radius:5px;padding:10px 12px">
+              <div class="mono uppercase text-zinc-500 mb-1" style="font-size:10px;letter-spacing:0.18em">PQC Standard</div>
+              <div class="accent font-bold" style="font-size:13px;letter-spacing:-0.01em">FIPS 203</div>
+              <div class="text-zinc-400" style="font-size:11px;margin-top:2px">ML-KEM-768</div>
+            </div>
+            <div style="background:rgba(185,28,28,0.1);border:1px solid rgba(185,28,28,0.25);border-radius:5px;padding:10px 12px">
+              <div class="mono uppercase text-zinc-500 mb-1" style="font-size:10px;letter-spacing:0.18em">Signatures</div>
+              <div class="accent font-bold" style="font-size:13px;letter-spacing:-0.01em">FIPS 204</div>
+              <div class="text-zinc-400" style="font-size:11px;margin-top:2px">ML-DSA Dilithium</div>
+            </div>
+            <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:5px;padding:10px 12px">
+              <div class="mono uppercase text-zinc-500 mb-1" style="font-size:10px;letter-spacing:0.18em">Runtime</div>
+              <div class="text-white font-bold" style="font-size:13px">Rust</div>
+              <div class="text-zinc-400" style="font-size:11px;margin-top:2px">Tokio async</div>
+            </div>
+            <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:5px;padding:10px 12px">
+              <div class="mono uppercase text-zinc-500 mb-1" style="font-size:10px;letter-spacing:0.18em">Cipher</div>
+              <div class="text-white font-bold" style="font-size:13px">AES-256-GCM</div>
+              <div class="text-zinc-400" style="font-size:11px;margin-top:2px">Authenticated</div>
+            </div>
+            <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:5px;padding:10px 12px">
+              <div class="mono uppercase text-zinc-500 mb-1" style="font-size:10px;letter-spacing:0.18em">Key derive</div>
+              <div class="text-white font-bold" style="font-size:13px">HKDF-SHA384</div>
+              <div class="text-zinc-400" style="font-size:11px;margin-top:2px">Hybrid concat</div>
+            </div>
+            <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:5px;padding:10px 12px">
+              <div class="mono uppercase text-zinc-500 mb-1" style="font-size:10px;letter-spacing:0.18em">Memory</div>
+              <div class="text-white font-bold" style="font-size:13px">Zeroize</div>
+              <div class="text-zinc-400" style="font-size:11px;margin-top:2px">Drop guarantee</div>
+            </div>
+          </div>
+          <div class="border-t border-white/5 pt-4 space-y-2">
+            <div class="spec-row"><span>Origin</span><span> Hyderabad, India</span></div><div class="spec-row"><span>Programme</span><span>iDEX Open Challenge</span></div><div class="spec-row"><span>IP status</span><span class="spec-accent">100% Indigenous</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="py-20 px-6 section-divider">
+  <div class="max-w-6xl mx-auto">
+    <div class="eyebrow">Threat Assessment</div>
+    <div class="grid md:grid-cols-3 gap-6 mt-8">
+      <div class="panel rounded p-8"><div class="stat-num">8,000+</div><div class="stat-label">Tactical radios and satellite terminals running vulnerable encryption</div></div>
+      <div class="panel rounded p-8"><div class="stat-num accent">Rs. 20,000 Cr</div><div class="stat-label">Estimated hardware replacement cost — neither feasible nor timely</div></div>
+      <div class="panel rounded p-8"><div class="stat-num">4–9 Yrs</div><div class="stat-label">Window before cryptographically relevant quantum computers arrive</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="py-24 px-6" style="background:rgba(255,255,255,0.01)">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+    <div>
+      <div class="eyebrow">Project Vajra</div>
+      <h2 class="section-title">The Transparent<br>Shield.</h2>
+      <p class="section-body mb-8">A software-defined sidecar that wraps any existing system in quantum-safe encryption. Zero hardware changes. Zero application modifications. Deployable in under 15 minutes.</p>
+      <a href="solution.html" class="btn-primary"><i data-lucide="arrow-right" style="width:14px;height:14px"></i>Full Solution Detail</a>
+    </div>
+    <div class="space-y-4">
+      <div class="panel-accent rounded p-6">
+        <div class="mono uppercase text-zinc-600 mb-3" style="font-size:11px;letter-spacing:0.22em">Step_01</div>
+        <div class="text-white font-bold uppercase italic tracking-tight mb-2" style="font-size:15px">Legacy Device Sends</div>
+        <p style="font-size:13px;line-height:1.75;text-transform:uppercase;letter-spacing:0.06em" class="text-muted">Tactical radio, banking switch, or satellite terminal sends data normally — zero changes required.</p>
+      </div>
+      <div class="panel rounded p-6" style="border-color:rgba(185,28,28,0.2)">
+        <div class="mono uppercase accent mb-3" style="font-size:11px;letter-spacing:0.22em">Step_02</div>
+        <div class="text-white font-bold uppercase italic tracking-tight mb-2" style="font-size:15px">Vajra Wraps Traffic</div>
+        <p style="font-size:13px;line-height:1.75;text-transform:uppercase;letter-spacing:0.06em" class="text-muted">Hybrid KEM: X25519 + ML-KEM-768. AES-256-GCM tunnel. Both algorithms must be broken simultaneously.</p>
+      </div>
+      <div class="panel-accent rounded p-6">
+        <div class="mono uppercase text-zinc-600 mb-3" style="font-size:11px;letter-spacing:0.22em">Step_03</div>
+        <div class="text-white font-bold uppercase italic tracking-tight mb-2" style="font-size:15px">Backend Receives Safely</div>
+        <p style="font-size:13px;line-height:1.75;text-transform:uppercase;letter-spacing:0.06em" class="text-muted">Receiving Vajra decrypts and delivers. Backend has zero awareness of the encryption layer.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-24 px-6 section-divider">
+  <div class="max-w-6xl mx-auto">
+    <div class="eyebrow">Deployment Profiles</div>
+    <h2 class="section-title">One Product.<br>Three Theatres.</h2>
+    <div class="grid md:grid-cols-3 gap-6 mt-10">
+      <div class="panel rounded p-8">
+        <i data-lucide="radio" class="accent mb-6" style="width:24px;height:24px"></i>
+        <div class="mono uppercase text-zinc-600 mb-2" style="font-size:11px;letter-spacing:0.22em">Profile_01</div>
+        <h3 class="text-white font-bold uppercase italic tracking-tight mb-4" style="font-size:17px">Tactical Edge</h3>
+        <p style="font-size:13px;line-height:1.75;text-transform:uppercase;letter-spacing:0.06em" class="text-muted mb-5">ARM binary for SDRs, satellite terminals, field comms.</p>
+        <div class="spec-row"><span>RAM</span><span>&lt; 64MB</span></div><div class="spec-row"><span>Air-gap</span><span>Capable</span></div><div class="spec-row"><span>Keys</span><span>USB Token</span></div>
+      </div>
+      <div class="panel rounded p-8" style="border-color:rgba(185,28,28,0.15)">
+        <i data-lucide="building-2" class="accent mb-6" style="width:24px;height:24px"></i>
+        <div class="mono uppercase accent mb-2" style="font-size:11px;letter-spacing:0.22em">Profile_02</div>
+        <h3 class="text-white font-bold uppercase italic tracking-tight mb-4" style="font-size:17px">Enterprise Core</h3>
+        <p style="font-size:13px;line-height:1.75;text-transform:uppercase;letter-spacing:0.06em" class="text-muted mb-5">OCI containers for banking switches, data centres.</p>
+        <div class="spec-row"><span>Throughput</span><span class="spec-accent">2000+ TPS</span></div><div class="spec-row"><span>Scaling</span><span>Horizontal</span></div><div class="spec-row"><span>Framework</span><span>RBI Aligned</span></div>
+      </div>
+      <div class="panel rounded p-8">
+        <i data-lucide="globe-2" class="accent mb-6" style="width:24px;height:24px"></i>
+        <div class="mono uppercase text-zinc-600 mb-2" style="font-size:11px;letter-spacing:0.22em">Profile_03</div>
+        <h3 class="text-white font-bold uppercase italic tracking-tight mb-4" style="font-size:17px">Sovereign Cloud</h3>
+        <p style="font-size:13px;line-height:1.75;text-transform:uppercase;letter-spacing:0.06em" class="text-muted mb-5">MeitY-compliant G2G gateway for ministry comms.</p>
+        <div class="spec-row"><span>Compliance</span><span>MeitY</span></div><div class="spec-row"><span>Key Store</span><span>On-Prem HSM</span></div><div class="spec-row"><span>IP</span><span class="spec-accent">100% Indian</span></div>
+      </div>
+    </div>
+    <div class="mt-10 text-center">
+      <a href="use-cases.html" class="btn-outline">View All Use Cases</a>
+    </div>
+  </div>
+</section>
+
+<section class="py-16 px-6" style="background:rgba(255,255,255,0.01)">
+  <div class="max-w-6xl mx-auto">
+    <div class="mono uppercase text-zinc-300 text-center mb-8" style="font-size:13px;letter-spacing:0.25em">Strategic Alignment</div>
+    <div class="flex flex-wrap justify-center gap-10 mono font-bold uppercase text-zinc-300" style="font-size:12px;letter-spacing:0.18em">
+      <span class="flex items-center gap-2"><i data-lucide="award"        style="width:13px;height:13px" class="accent"></i>iDEX Open Challenge 2026</span>
+      <span class="flex items-center gap-2"><i data-lucide="zap"          style="width:13px;height:13px" class="accent"></i>National Quantum Mission</span>
+      <span class="flex items-center gap-2"><i data-lucide="shield-check" style="width:13px;height:13px" class="accent"></i>NIST FIPS 203 / 204</span>
+      <span class="flex items-center gap-2"><i data-lucide="flag"         style="width:13px;height:13px" class="accent"></i>Aatmanirbhar Bharat</span>
+    </div>
+  </div>
+</section>
+
+<section class="py-24 px-6 section-divider">
+  <div class="max-w-3xl mx-auto text-center">
+    <div class="eyebrow">Get Involved</div>
+    <h2 class="section-title">Ready to Protect<br>Your Infrastructure?</h2>
+    <p class="section-body mx-auto mb-10">Prapti Labs is seeking design partners in defence, BFSI, and critical infrastructure. Even an informal conversation helps shape the product for your environment.</p>
+    <div class="flex flex-wrap justify-center gap-4">
+      <a href="contact.html" class="btn-primary"><i data-lucide="mail" style="width:14px;height:14px"></i>Request a Pilot Briefing</a>
+      <a href="about.html" class="btn-outline">About the Founder</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer-bg py-20 px-6">
+  <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between gap-12 mb-16">
+    <div class="space-y-3">
+      <div class="text-white font-black uppercase italic" style="font-size:1.8rem;letter-spacing:0.02em">Prapti Labs</div>
+      <div class="mono uppercase text-zinc-400" style="font-size:12px;letter-spacing:0.2em"> Hyderabad // Sovereign Cryptography</div>
+      <div class="mono uppercase text-zinc-500" style="font-size:12px;letter-spacing:0.15em">"Security is Culture."</div>
+    </div>
+    <div class="grid grid-cols-2 gap-x-16 gap-y-2 mono uppercase text-zinc-400" style="font-size:13px;letter-spacing:0.15em">
+      <a href="solution.html"   class="text-zinc-400 hover:text-white transition py-1">Solution</a>
+      <a href="use-cases.html"  class="text-zinc-400 hover:text-white transition py-1">Use Cases</a>
+      <a href="technology.html" class="text-zinc-400 hover:text-white transition py-1">Technology</a>
+      <a href="about.html"      class="text-zinc-400 hover:text-white transition py-1">About</a>
+      <a href="contact.html"    class="hover:text-red-400 transition py-1 text-zinc-400">Contact</a>
+      <a href="https://github.com/karteekp" class="text-zinc-400 hover:text-white transition py-1">GitHub</a>
+    </div>
+    <div>
+      <div class="mono uppercase text-zinc-400 mb-2" style="font-size:12px;letter-spacing:0.2em">Contact</div>
+      <a href="mailto:admin@praptilabs.com" class="mono font-black text-white hover:text-red-400 transition" style="font-size:1.4rem">admin@praptilabs.com</a>
+    </div>
+  </div>
+  <div class="max-w-6xl mx-auto border-t border-white/5 pt-8 mono text-center uppercase text-zinc-500" style="font-size:11px;letter-spacing:0.25em">
+    iDEX Open Challenge Applicant // NQM Aligned // Aatmanirbhar Bharat // &copy; 2026 Prapti Labs
+  </div>
+</footer>
+<script src="assets/vajra.js"></script>
+</body>
+</html>
