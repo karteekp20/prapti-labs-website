@@ -13,7 +13,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/lucide@0.383.0/dist/umd/lucide.min.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;1,600;1,700&family=IBM+Plex+Mono:wght@400;700&family=Manrope:wght@300;400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/vajra.css">
 </head>
 <body>
@@ -25,9 +25,9 @@
         <path d="M11 9 L11 43 M11 9 L24 9 Q33 9 33 17 Q33 25 24 25 L11 25"
               stroke="white" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
         <circle cx="37" cy="37" r="3" fill="#ef4444"/>
-        <text x="68" y="24" font-family="Inter, system-ui, sans-serif" font-weight="900" font-size="19" letter-spacing="2" word-spacing="8" fill="white">PRAPTI LABS</text>
+        <text x="68" y="24" font-family="Barlow Condensed, system-ui, sans-serif" font-weight="700" font-size="19" letter-spacing="2" word-spacing="8" fill="white">PRAPTI LABS</text>
         <line x1="68" y1="32" x2="104" y2="32" stroke="#b91c1c" stroke-width="1.5"/>
-        <text x="68" y="47" font-family="JetBrains Mono, Courier New, monospace" font-weight="700" font-size="11" letter-spacing="2.2" fill="#ef4444">SECURITY IS CULTURE</text>
+        <text x="68" y="47" font-family="IBM Plex Mono, Courier New, monospace" font-weight="700" font-size="11" letter-spacing="2.2" fill="#ef4444">SECURITY IS CULTURE</text>
       </svg>
     </a>
     <div class="hidden md:flex gap-10 font-bold uppercase text-zinc-500" style="font-size:12px;letter-spacing:0.3em">
@@ -85,19 +85,19 @@
         <div class="mono uppercase text-zinc-600 mb-5" style="font-size:11px;letter-spacing:0.22em">Step_01</div>
         <i data-lucide="radio" class="accent mb-5" style="width:28px;height:28px"></i>
         <h3 class="text-white font-bold uppercase italic tracking-tight mb-3" style="font-size:15px">Legacy Device Sends</h3>
-        <p style="font-size:13px;line-height:1.75;text-transform:uppercase;letter-spacing:0.06em" class="text-muted">Tactical radio, banking switch, or satellite terminal sends data exactly as it does today. Zero configuration changes on the protected device.</p>
+        <p style="font-size:14px;line-height:1.8" class="text-muted">Tactical radio, banking switch, or satellite terminal sends data exactly as it does today. Zero configuration changes on the protected device.</p>
       </div>
       <div class="panel rounded p-8" style="border-color:rgba(185,28,28,0.2)">
         <div class="mono uppercase accent mb-5" style="font-size:11px;letter-spacing:0.22em">Step_02</div>
         <i data-lucide="shield" class="accent mb-5" style="width:28px;height:28px"></i>
         <h3 class="text-white font-bold uppercase italic tracking-tight mb-3" style="font-size:15px">Vajra Wraps Traffic</h3>
-        <p style="font-size:13px;line-height:1.75;text-transform:uppercase;letter-spacing:0.06em" class="text-muted">The sidecar intercepts the connection, runs hybrid PQ-TLS handshake, and wraps all data in an AES-256-GCM encrypted tunnel to the receiving Vajra instance.</p>
+        <p style="font-size:14px;line-height:1.8" class="text-muted">The sidecar intercepts the connection, runs hybrid PQ-TLS handshake, and wraps all data in an AES-256-GCM encrypted tunnel to the receiving Vajra instance.</p>
       </div>
       <div class="panel-accent rounded p-8">
         <div class="mono uppercase text-zinc-600 mb-5" style="font-size:11px;letter-spacing:0.22em">Step_03</div>
         <i data-lucide="server" class="accent mb-5" style="width:28px;height:28px"></i>
         <h3 class="text-white font-bold uppercase italic tracking-tight mb-3" style="font-size:15px">Backend Receives Safely</h3>
-        <p style="font-size:13px;line-height:1.75;text-transform:uppercase;letter-spacing:0.06em" class="text-muted">Receiving Vajra decrypts and delivers plaintext to the backend on localhost. Backend has zero awareness of the encryption layer.</p>
+        <p style="font-size:14px;line-height:1.8" class="text-muted">Receiving Vajra decrypts and delivers plaintext to the backend on localhost. Backend has zero awareness of the encryption layer.</p>
       </div>
     </div>
   </div>
@@ -115,14 +115,14 @@
             <i data-lucide="lock" class="accent flex-shrink-0" style="width:20px;height:20px;margin-top:2px"></i>
             <div>
               <div class="text-white font-bold uppercase italic tracking-tight mb-1" style="font-size:12px">Classical — X25519</div>
-              <div style="font-size:13px;line-height:1.75;text-transform:uppercase;letter-spacing:0.06em" class="text-muted">Elliptic Curve Diffie-Hellman. Computationally hard for classical computers.</div>
+              <div style="font-size:14px;line-height:1.8" class="text-muted">Elliptic Curve Diffie-Hellman. Computationally hard for classical computers.</div>
             </div>
           </div>
           <div class="panel rounded p-5 flex items-start gap-4" style="border-color:rgba(185,28,28,0.2)">
             <i data-lucide="shield-check" class="accent flex-shrink-0" style="width:20px;height:20px;margin-top:2px"></i>
             <div>
               <div class="text-white font-bold uppercase italic tracking-tight mb-1" style="font-size:12px">Post-Quantum — ML-KEM-768</div>
-              <div style="font-size:13px;line-height:1.75;text-transform:uppercase;letter-spacing:0.06em" class="text-muted">Lattice-based KEM per NIST FIPS 203. Computationally hard even for quantum computers.</div>
+              <div style="font-size:14px;line-height:1.8" class="text-muted">Lattice-based KEM per NIST FIPS 203. Computationally hard even for quantum computers.</div>
             </div>
           </div>
         </div>
@@ -147,21 +147,21 @@
         <i data-lucide="radio" class="accent mb-6" style="width:24px;height:24px"></i>
         <div class="mono uppercase text-zinc-600 mb-2" style="font-size:11px;letter-spacing:0.22em">Profile_01</div>
         <h3 class="text-white font-bold uppercase italic tracking-tight mb-4" style="font-size:17px">Tactical Edge</h3>
-        <p style="font-size:13px;line-height:1.75;text-transform:uppercase;letter-spacing:0.06em" class="text-muted mb-6">ARM/RISC-V static binary for SDRs, satellite terminals, and field communications.</p>
+        <p style="font-size:14px;line-height:1.8" class="text-muted mb-6">ARM/RISC-V static binary for SDRs, satellite terminals, and field communications.</p>
         <div class="spec-row"><span>RAM footprint</span><span>&lt; 64MB</span></div><div class="spec-row"><span>Air-gap</span><span>Capable</span></div><div class="spec-row"><span>Key provision</span><span>USB Token</span></div><div class="spec-row"><span>Target HW</span><span>Bharat-Pi</span></div><div class="spec-row"><span>Binary type</span><span>Static musl</span></div>
       </div>
       <div class="panel rounded p-10" style="border-color:rgba(185,28,28,0.15)">
-        <i data-lucide="building-2" class="accent mb-6" style="width:24px;height:24px"></i>
+        <i data-lucide="server" class="accent mb-6" style="width:24px;height:24px"></i>
         <div class="mono uppercase accent mb-2" style="font-size:11px;letter-spacing:0.22em">Profile_02</div>
         <h3 class="text-white font-bold uppercase italic tracking-tight mb-4" style="font-size:17px">Enterprise Core</h3>
-        <p style="font-size:13px;line-height:1.75;text-transform:uppercase;letter-spacing:0.06em" class="text-muted mb-6">OCI containers for banking switches, payment gateways, and data centres.</p>
+        <p style="font-size:14px;line-height:1.8" class="text-muted mb-6">OCI containers for banking switches, payment gateways, and data centres.</p>
         <div class="spec-row"><span>Throughput</span><span class="spec-accent">2000+ TPS</span></div><div class="spec-row"><span>Scaling</span><span>Horizontal</span></div><div class="spec-row"><span>Reload</span><span>Zero downtime</span></div><div class="spec-row"><span>Framework</span><span>RBI Aligned</span></div><div class="spec-row"><span>Deploy</span><span>OCI containers</span></div>
       </div>
       <div class="panel rounded p-10">
-        <i data-lucide="globe-2" class="accent mb-6" style="width:24px;height:24px"></i>
+        <i data-lucide="landmark" class="accent mb-6" style="width:24px;height:24px"></i>
         <div class="mono uppercase text-zinc-600 mb-2" style="font-size:11px;letter-spacing:0.22em">Profile_03</div>
         <h3 class="text-white font-bold uppercase italic tracking-tight mb-4" style="font-size:17px">Sovereign Cloud</h3>
-        <p style="font-size:13px;line-height:1.75;text-transform:uppercase;letter-spacing:0.06em" class="text-muted mb-6">MeitY-compliant G2G gateway for ministry and inter-agency communication.</p>
+        <p style="font-size:14px;line-height:1.8" class="text-muted mb-6">MeitY-compliant G2G gateway for ministry and inter-agency communication.</p>
         <div class="spec-row"><span>Compliance</span><span>MeitY</span></div><div class="spec-row"><span>Key store</span><span>On-Prem HSM</span></div><div class="spec-row"><span>IP</span><span>100% Indian</span></div><div class="spec-row"><span>Key jurisdiction</span><span class="spec-accent">India only</span></div><div class="spec-row"><span>External data</span><span class="spec-accent">Zero</span></div>
       </div>
     </div>
