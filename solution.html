@@ -20,7 +20,7 @@
 <nav class="fixed top-0 w-full z-50 nav-blur">
   <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
     <a href="index.html" class="flex items-center" style="text-decoration:none">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 56" fill="none" height="44" style="display:block">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 56" fill="none" height="44" style="display:block">
         <rect x="0" y="0" width="52" height="52" rx="8" fill="rgba(185,28,28,0.18)" stroke="#b91c1c" stroke-width="1.5"/>
         <path d="M11 9 L11 43 M11 9 L24 9 Q33 9 33 17 Q33 25 24 25 L11 25"
               stroke="white" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
@@ -60,7 +60,7 @@
   </div>
 </section>
 
-<section class="py-20 px-6 section-divider">
+<section class="py-24 px-6 section-divider section-alt">
   <div class="max-w-6xl mx-auto">
     <div class="eyebrow">The Problem</div>
     <h2 class="section-title">Harvest Now,<br>Decrypt Later.</h2>
@@ -76,7 +76,7 @@
   </div>
 </section>
 
-<section class="py-20 px-6" style="background:rgba(255,255,255,0.01)">
+<section class="py-24 px-6 section-divider section-main">
   <div class="max-w-6xl mx-auto">
     <div class="eyebrow">How Vajra Works</div>
     <h2 class="section-title">Three Steps.<br>Zero Disruption.</h2>
@@ -101,194 +101,123 @@
       </div>
     </div>
 
-    <!-- Network flow diagram — rebuilt full-width SVG -->
-    <div class="mt-14">
-      <div class="eyebrow mb-6">Network Flow</div>
-      <div class="panel rounded" style="padding:32px 24px 28px;overflow-x:auto">
+    <!-- Network flow diagram -->
+    <div class="mt-12">
+      <div class="eyebrow mb-5">Network Flow</div>
+      <div class="panel rounded" style="padding:28px 24px 24px;overflow-x:auto">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 220"
+           style="width:100%;min-width:560px;display:block"
+           role="img" aria-label="Vajra network flow: Legacy device to Vajra-A initiator encrypted tunnel to Vajra-B responder to backend">
+        <text x="440" y="22" text-anchor="middle" font-family="IBM Plex Mono,Courier New,monospace" font-size="10" font-weight="700" letter-spacing="3" fill="#3f3f46">VAJRA TRANSPARENT SIDECAR — WIRE-LEVEL VIEW</text>
+        <line x1="28" y1="182" x2="852" y2="182" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+        <line x1="240" y1="194" x2="276" y2="194" stroke="#52525b" stroke-width="2"/>
+        <polygon points="276,189 286,194 276,199" fill="#52525b"/>
+        <text x="296" y="198" font-family="IBM Plex Mono,Courier New,monospace" font-size="9" font-weight="700" letter-spacing="1.5" fill="#52525b">PLAIN — UNCHANGED</text>
+        <line x1="480" y1="194" x2="516" y2="194" stroke="#b91c1c" stroke-width="2.5" stroke-dasharray="5 3"/>
+        <polygon points="516,189 526,194 516,199" fill="#b91c1c"/>
+        <text x="536" y="198" font-family="IBM Plex Mono,Courier New,monospace" font-size="9" font-weight="700" letter-spacing="1.5" fill="#b91c1c">QUANTUM-SAFE ENCRYPTED</text>
+        <rect x="28" y="44" width="155" height="108" rx="7" fill="rgba(255,255,255,0.03)" stroke="#3f3f46" stroke-width="1.5"/>
+        <text x="105" y="64" text-anchor="middle" font-family="IBM Plex Mono,Courier New,monospace" font-size="9" font-weight="700" letter-spacing="2" fill="#52525b">LEGACY DEVICE</text>
+        <line x1="42" y1="71" x2="169" y2="71" stroke="#3f3f46" stroke-width="0.7"/>
+        <text x="105" y="96" text-anchor="middle" font-family="Barlow Condensed,system-ui,sans-serif" font-size="18" font-weight="700" fill="#ffffff">HF Radio</text>
+        <text x="105" y="112" text-anchor="middle" font-family="IBM Plex Mono,Courier New,monospace" font-size="9" fill="#52525b">No changes</text>
+        <rect x="63" y="124" width="84" height="14" rx="3" fill="rgba(255,255,255,0.03)" stroke="#3f3f46" stroke-width="1"/>
+        <text x="105" y="135" text-anchor="middle" font-family="IBM Plex Mono,Courier New,monospace" font-size="8" font-weight="700" letter-spacing="1.5" fill="#3f3f46">UNCHANGED</text>
+        <line x1="183" y1="98" x2="211" y2="98" stroke="#52525b" stroke-width="2"/>
+        <polygon points="211,93 221,98 211,103" fill="#52525b"/>
+        <text x="202" y="116" text-anchor="middle" font-family="IBM Plex Mono,Courier New,monospace" font-size="9" font-weight="700" letter-spacing="1.5" fill="#52525b">PLAIN TCP</text>
+        <rect x="218" y="40" width="161" height="116" rx="9" fill="none" stroke="rgba(185,28,28,0.22)" stroke-width="2.5"/>
+        <rect x="221" y="44" width="155" height="108" rx="7" fill="rgba(185,28,28,0.13)" stroke="#b91c1c" stroke-width="1.8"/>
+        <text x="299" y="64" text-anchor="middle" font-family="IBM Plex Mono,Courier New,monospace" font-size="9" font-weight="700" letter-spacing="2" fill="#b91c1c">VAJRA — A</text>
+        <line x1="235" y1="71" x2="362" y2="71" stroke="rgba(185,28,28,0.3)" stroke-width="0.7"/>
+        <text x="299" y="94" text-anchor="middle" font-family="Barlow Condensed,system-ui,sans-serif" font-size="18" font-weight="700" fill="#ffffff">Initiator</text>
+        <text x="299" y="110" text-anchor="middle" font-family="IBM Plex Mono,Courier New,monospace" font-size="9" fill="#9ca3af">Hybrid KEM</text>
+        <text x="299" y="123" text-anchor="middle" font-family="IBM Plex Mono,Courier New,monospace" font-size="9" fill="#9ca3af">X25519 + ML-KEM-768</text>
+        <rect x="259" y="134" width="80" height="10" rx="2" fill="rgba(185,28,28,0.25)"/>
+        <text x="299" y="143" text-anchor="middle" font-family="IBM Plex Mono,Courier New,monospace" font-size="8" font-weight="700" letter-spacing="1.5" fill="#b91c1c">ENCRYPTS</text>
+        <text x="430" y="84" text-anchor="middle" font-family="IBM Plex Mono,Courier New,monospace" font-size="9" font-weight="700" letter-spacing="2" fill="#b91c1c">ENCRYPTED</text>
+        <line x1="376" y1="98" x2="474" y2="98" stroke="#b91c1c" stroke-width="2.5" stroke-dasharray="6 4"/>
+        <polygon points="474,93 484,98 474,103" fill="#b91c1c"/>
+        <text x="430" y="116" text-anchor="middle" font-family="IBM Plex Mono,Courier New,monospace" font-size="9" fill="#7f1d1d">AES-256-GCM</text>
+        <rect x="481" y="40" width="161" height="116" rx="9" fill="none" stroke="rgba(185,28,28,0.22)" stroke-width="2.5"/>
+        <rect x="484" y="44" width="155" height="108" rx="7" fill="rgba(185,28,28,0.13)" stroke="#b91c1c" stroke-width="1.8"/>
+        <text x="562" y="64" text-anchor="middle" font-family="IBM Plex Mono,Courier New,monospace" font-size="9" font-weight="700" letter-spacing="2" fill="#b91c1c">VAJRA — B</text>
+        <line x1="498" y1="71" x2="625" y2="71" stroke="rgba(185,28,28,0.3)" stroke-width="0.7"/>
+        <text x="562" y="94" text-anchor="middle" font-family="Barlow Condensed,system-ui,sans-serif" font-size="18" font-weight="700" fill="#ffffff">Responder</text>
+        <text x="562" y="110" text-anchor="middle" font-family="IBM Plex Mono,Courier New,monospace" font-size="9" fill="#9ca3af">Decapsulate</text>
+        <text x="562" y="123" text-anchor="middle" font-family="IBM Plex Mono,Courier New,monospace" font-size="9" fill="#9ca3af">HKDF-SHA384</text>
+        <rect x="522" y="134" width="80" height="10" rx="2" fill="rgba(185,28,28,0.25)"/>
+        <text x="562" y="143" text-anchor="middle" font-family="IBM Plex Mono,Courier New,monospace" font-size="8" font-weight="700" letter-spacing="1.5" fill="#b91c1c">DECRYPTS</text>
+        <line x1="639" y1="98" x2="667" y2="98" stroke="#52525b" stroke-width="2"/>
+        <polygon points="667,93 677,98 667,103" fill="#52525b"/>
+        <text x="658" y="116" text-anchor="middle" font-family="IBM Plex Mono,Courier New,monospace" font-size="9" font-weight="700" letter-spacing="1.5" fill="#52525b">PLAIN TCP</text>
+        <rect x="677" y="44" width="155" height="108" rx="7" fill="rgba(255,255,255,0.03)" stroke="#3f3f46" stroke-width="1.5"/>
+        <text x="754" y="64" text-anchor="middle" font-family="IBM Plex Mono,Courier New,monospace" font-size="9" font-weight="700" letter-spacing="2" fill="#52525b">BACKEND</text>
+        <line x1="691" y1="71" x2="818" y2="71" stroke="#3f3f46" stroke-width="0.7"/>
+        <text x="754" y="96" text-anchor="middle" font-family="Barlow Condensed,system-ui,sans-serif" font-size="18" font-weight="700" fill="#ffffff">Service</text>
+        <text x="754" y="112" text-anchor="middle" font-family="IBM Plex Mono,Courier New,monospace" font-size="9" fill="#52525b">No changes</text>
+        <rect x="712" y="124" width="84" height="14" rx="3" fill="rgba(255,255,255,0.03)" stroke="#3f3f46" stroke-width="1"/>
+        <text x="754" y="135" text-anchor="middle" font-family="IBM Plex Mono,Courier New,monospace" font-size="8" font-weight="700" letter-spacing="1.5" fill="#3f3f46">UNCHANGED</text>
+      </svg>
+      </div>
 
-        <!-- Full-width SVG diagram — readable at all viewport widths -->
-        <svg xmlns="http://www.w3.org/2000/svg"
-             viewBox="0 0 980 240"
-             style="width:100%;min-width:600px;display:block"
-             role="img"
-             aria-label="Vajra network flow: Legacy device sends plain TCP to Vajra-A Initiator which encrypts and sends quantum-safe tunnel to Vajra-B Responder which decrypts and delivers plain TCP to the Backend Service">
+    </div>
+    </div>
 
-          <!-- ── Title ── -->
-          <text x="490" y="22" text-anchor="middle"
-                font-family="IBM Plex Mono,Courier New,monospace"
-                font-size="10" font-weight="700" letter-spacing="3" fill="#3f3f46">
-            VAJRA TRANSPARENT SIDECAR — WIRE-LEVEL VIEW
-          </text>
+<section class="inner-page px-6 hero-bg">
+  <div class="max-w-6xl mx-auto">
+    <div class="eyebrow">Project Vajra</div>
+    <h1 class="section-title">The Transparent<br>Shield.</h1>
+    <p class="section-body">A software-defined Post-Quantum Cryptographic gateway that wraps any legacy system in quantum-safe encryption — without touching hardware or application code.</p>
+  </div>
+</section>
 
-          <!-- ════════════════════════════════════════
-               BOX 1: Legacy Device  x=28 cx=107
-               ════════════════════════════════════════ -->
-          <rect x="28" y="48" width="158" height="122" rx="8"
-                fill="rgba(255,255,255,0.03)" stroke="#3f3f46" stroke-width="1.5"/>
-          <text x="107" y="74" text-anchor="middle"
-                font-family="IBM Plex Mono,Courier New,monospace"
-                font-size="9" font-weight="700" letter-spacing="2.5" fill="#52525b">LEGACY DEVICE</text>
-          <line x1="48" y1="82" x2="166" y2="82" stroke="#3f3f46" stroke-width="0.8"/>
-          <text x="107" y="105" text-anchor="middle"
-                font-family="Barlow Condensed,system-ui,sans-serif"
-                font-size="26" font-weight="700" fill="#ffffff">HF Radio</text>
-          <text x="107" y="126" text-anchor="middle"
-                font-family="IBM Plex Mono,Courier New,monospace"
-                font-size="10" letter-spacing="1" fill="#52525b">No changes</text>
-          <rect x="57" y="138" width="100" height="18" rx="3"
-                fill="rgba(255,255,255,0.03)" stroke="#3f3f46" stroke-width="1"/>
-          <text x="107" y="151" text-anchor="middle"
-                font-family="IBM Plex Mono,Courier New,monospace"
-                font-size="9" font-weight="700" letter-spacing="1.5" fill="#3f3f46">UNCHANGED</text>
-
-          <!-- ════════════════════════════════════════
-               ARROW 1: Plain TCP  186→230
-               ════════════════════════════════════════ -->
-          <line x1="186" y1="109" x2="219" y2="109"
-                stroke="#52525b" stroke-width="2"/>
-          <polygon points="219,104 230,109 219,114" fill="#52525b"/>
-          <text x="208" y="127" text-anchor="middle"
-                font-family="IBM Plex Mono,Courier New,monospace"
-                font-size="9" font-weight="700" letter-spacing="1.5" fill="#52525b">PLAIN TCP</text>
-
-          <!-- ════════════════════════════════════════
-               BOX 2: Vajra-A Initiator  x=230 cx=309
-               ════════════════════════════════════════ -->
-          <!-- outer glow -->
-          <rect x="226" y="44" width="166" height="130" rx="10"
-                fill="none" stroke="rgba(185,28,28,0.25)" stroke-width="3"/>
-          <!-- main box -->
-          <rect x="230" y="48" width="158" height="122" rx="8"
-                fill="rgba(185,28,28,0.13)" stroke="#b91c1c" stroke-width="2"/>
-          <text x="309" y="70" text-anchor="middle"
-                font-family="IBM Plex Mono,Courier New,monospace"
-                font-size="9" font-weight="700" letter-spacing="2.5" fill="#b91c1c">VAJRA — A</text>
-          <line x1="250" y1="78" x2="368" y2="78" stroke="rgba(185,28,28,0.35)" stroke-width="1"/>
-          <text x="309" y="102" text-anchor="middle"
-                font-family="Barlow Condensed,system-ui,sans-serif"
-                font-size="28" font-weight="700" fill="#ffffff">Initiator</text>
-          <text x="309" y="122" text-anchor="middle"
-                font-family="IBM Plex Mono,Courier New,monospace"
-                font-size="10" letter-spacing="1" fill="#9ca3af">Hybrid KEM</text>
-          <text x="309" y="138" text-anchor="middle"
-                font-family="IBM Plex Mono,Courier New,monospace"
-                font-size="10" letter-spacing="1" fill="#9ca3af">X25519 + ML-KEM-768</text>
-          <rect x="259" y="150" width="100" height="12" rx="3"
-                fill="rgba(185,28,28,0.25)"/>
-          <text x="309" y="160" text-anchor="middle"
-                font-family="IBM Plex Mono,Courier New,monospace"
-                font-size="9" font-weight="700" letter-spacing="2" fill="#b91c1c">ENCRYPTS</text>
-
-          <!-- ════════════════════════════════════════
-               ARROW 2: Encrypted tunnel  388→512
-               ════════════════════════════════════════ -->
-          <!-- tunnel zone background -->
-          <rect x="392" y="82" width="116" height="54" rx="6"
-                fill="rgba(185,28,28,0.07)" stroke="rgba(185,28,28,0.2)" stroke-width="1"/>
-          <text x="450" y="96" text-anchor="middle"
-                font-family="IBM Plex Mono,Courier New,monospace"
-                font-size="10" font-weight="700" letter-spacing="2" fill="#b91c1c">ENCRYPTED</text>
-          <!-- dashed line: starts right at box2 edge, ends right at box3 left edge -->
-          <line x1="388" y1="109" x2="504" y2="109"
-                stroke="#b91c1c" stroke-width="2.5" stroke-dasharray="6 4"/>
-          <!-- arrowhead tip exactly touches box3 at x=512 -->
-          <polygon points="504,103 516,109 504,115" fill="#b91c1c"/>
-          <text x="450" y="124" text-anchor="middle"
-                font-family="IBM Plex Mono,Courier New,monospace"
-                font-size="9" letter-spacing="1" fill="#7f1d1d">AES-256-GCM</text>
-
-          <!-- ════════════════════════════════════════
-               BOX 3: Vajra-B Responder  x=512 cx=591
-               ════════════════════════════════════════ -->
-          <!-- outer glow -->
-          <rect x="508" y="44" width="166" height="130" rx="10"
-                fill="none" stroke="rgba(185,28,28,0.25)" stroke-width="3"/>
-          <!-- main box -->
-          <rect x="512" y="48" width="158" height="122" rx="8"
-                fill="rgba(185,28,28,0.13)" stroke="#b91c1c" stroke-width="2"/>
-          <text x="591" y="70" text-anchor="middle"
-                font-family="IBM Plex Mono,Courier New,monospace"
-                font-size="9" font-weight="700" letter-spacing="2.5" fill="#b91c1c">VAJRA — B</text>
-          <line x1="532" y1="78" x2="650" y2="78" stroke="rgba(185,28,28,0.35)" stroke-width="1"/>
-          <text x="591" y="102" text-anchor="middle"
-                font-family="Barlow Condensed,system-ui,sans-serif"
-                font-size="28" font-weight="700" fill="#ffffff">Responder</text>
-          <text x="591" y="122" text-anchor="middle"
-                font-family="IBM Plex Mono,Courier New,monospace"
-                font-size="10" letter-spacing="1" fill="#9ca3af">Decapsulate</text>
-          <text x="591" y="138" text-anchor="middle"
-                font-family="IBM Plex Mono,Courier New,monospace"
-                font-size="10" letter-spacing="1" fill="#9ca3af">HKDF-SHA384</text>
-          <rect x="541" y="150" width="100" height="12" rx="3"
-                fill="rgba(185,28,28,0.25)"/>
-          <text x="591" y="160" text-anchor="middle"
-                font-family="IBM Plex Mono,Courier New,monospace"
-                font-size="9" font-weight="700" letter-spacing="2" fill="#b91c1c">DECRYPTS</text>
-
-          <!-- ════════════════════════════════════════
-               ARROW 3: Plain TCP  670→714
-               ════════════════════════════════════════ -->
-          <line x1="670" y1="109" x2="703" y2="109"
-                stroke="#52525b" stroke-width="2"/>
-          <polygon points="703,104 714,109 703,114" fill="#52525b"/>
-          <text x="692" y="127" text-anchor="middle"
-                font-family="IBM Plex Mono,Courier New,monospace"
-                font-size="9" font-weight="700" letter-spacing="1.5" fill="#52525b">PLAIN TCP</text>
-
-          <!-- ════════════════════════════════════════
-               BOX 4: Backend Service  x=714 cx=793
-               ════════════════════════════════════════ -->
-          <rect x="714" y="48" width="158" height="122" rx="8"
-                fill="rgba(255,255,255,0.03)" stroke="#3f3f46" stroke-width="1.5"/>
-          <text x="793" y="74" text-anchor="middle"
-                font-family="IBM Plex Mono,Courier New,monospace"
-                font-size="9" font-weight="700" letter-spacing="2.5" fill="#52525b">BACKEND</text>
-          <line x1="734" y1="82" x2="852" y2="82" stroke="#3f3f46" stroke-width="0.8"/>
-          <text x="793" y="105" text-anchor="middle"
-                font-family="Barlow Condensed,system-ui,sans-serif"
-                font-size="26" font-weight="700" fill="#ffffff">Service</text>
-          <text x="793" y="126" text-anchor="middle"
-                font-family="IBM Plex Mono,Courier New,monospace"
-                font-size="10" letter-spacing="1" fill="#52525b">No changes</text>
-          <rect x="743" y="138" width="100" height="18" rx="3"
-                fill="rgba(255,255,255,0.03)" stroke="#3f3f46" stroke-width="1"/>
-          <text x="793" y="151" text-anchor="middle"
-                font-family="IBM Plex Mono,Courier New,monospace"
-                font-size="9" font-weight="700" letter-spacing="1.5" fill="#3f3f46">UNCHANGED</text>
-
-          <!-- ════════════════════════════════════════
-               LEGEND
-               ════════════════════════════════════════ -->
-          <line x1="28" y1="196" x2="952" y2="196"
-                stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
-          <!-- item 1 -->
-          <line x1="250" y1="215" x2="295" y2="215"
-                stroke="#52525b" stroke-width="2"/>
-          <polygon points="295,210 304,215 295,220" fill="#52525b"/>
-          <text x="314" y="219" text-anchor="start"
-                font-family="IBM Plex Mono,Courier New,monospace"
-                font-size="10" font-weight="700" letter-spacing="1.5" fill="#52525b">
-            PLAIN — BOTH DEVICES UNCHANGED
-          </text>
-          <!-- item 2 -->
-          <line x1="558" y1="215" x2="603" y2="215"
-                stroke="#b91c1c" stroke-width="2.5" stroke-dasharray="5 3"/>
-          <polygon points="603,210 612,215 603,220" fill="#b91c1c"/>
-          <text x="622" y="219" text-anchor="start"
-                font-family="IBM Plex Mono,Courier New,monospace"
-                font-size="10" font-weight="700" letter-spacing="1.5" fill="#b91c1c">
-            QUANTUM-SAFE ENCRYPTED TUNNEL
-          </text>
-
-        </svg>
-
+<section class="py-24 px-6 section-divider section-alt">
+  <div class="max-w-6xl mx-auto">
+    <div class="eyebrow">The Problem</div>
+    <h2 class="section-title">Harvest Now,<br>Decrypt Later.</h2>
+    <div class="grid md:grid-cols-2 gap-12 items-start">
+      <p class="section-body">Adversarial state actors are intercepting and archiving India's encrypted communications today — storing them for decryption once quantum computers become powerful enough. This HNDL strategy is passive, undetectable, and already underway.</p>
+      <div class="panel-accent rounded p-8 space-y-5 mono uppercase text-zinc-500" style="font-size:10px;letter-spacing:0.25em">
+        <div class="flex items-center gap-4"><span class="accent font-bold" style="min-width:36px">2026</span><div class="flex-1 bar-track"><div class="bar-fill" style="width:100%"></div></div><span>Data intercepted</span></div>
+        <div class="flex items-center gap-4"><span class="text-zinc-600 font-bold" style="min-width:36px">2030</span><div class="flex-1 bar-track"><div class="bar-fill" style="width:60%"></div></div><span>Quantum research matures</span></div>
+        <div class="flex items-center gap-4"><span class="text-zinc-600 font-bold" style="min-width:36px">2033</span><div class="flex-1 bar-track"><div class="bar-fill" style="width:30%"></div></div><span>CRQC arrives</span></div>
+        <div class="flex items-center gap-4"><span class="text-zinc-700 font-bold" style="min-width:36px">2035</span><div class="flex-1 bar-track"><div class="bar-fill" style="width:10%"></div></div><span>Secrets exposed</span></div>
       </div>
     </div>
+  </div>
+</section>
+
+<section class="py-24 px-6 section-divider section-main">
+  <div class="max-w-6xl mx-auto">
+    <div class="eyebrow">How Vajra Works</div>
+    <h2 class="section-title">Three Steps.<br>Zero Disruption.</h2>
+    <div class="grid md:grid-cols-3 gap-6 mt-10">
+      <div class="panel-accent rounded p-8">
+        <div class="mono uppercase text-zinc-600 mb-5" style="font-size:11px;letter-spacing:0.22em">Step_01</div>
+        <i data-lucide="radio" class="accent mb-5" style="width:28px;height:28px"></i>
+        <h3 class="text-white font-bold uppercase italic tracking-tight mb-3" style="font-size:15px">Legacy Device Sends</h3>
+        <p style="font-size:14px;line-height:1.8" class="text-muted">Tactical radio, banking switch, or satellite terminal sends data exactly as it does today. Zero configuration changes on the protected device.</p>
+      </div>
+      <div class="panel rounded p-8" style="border-color:rgba(185,28,28,0.2)">
+        <div class="mono uppercase accent mb-5" style="font-size:11px;letter-spacing:0.22em">Step_02</div>
+        <i data-lucide="shield" class="accent mb-5" style="width:28px;height:28px"></i>
+        <h3 class="text-white font-bold uppercase italic tracking-tight mb-3" style="font-size:15px">Vajra Wraps Traffic</h3>
+        <p style="font-size:14px;line-height:1.8" class="text-muted">The sidecar intercepts the connection, runs hybrid PQ-TLS handshake, and wraps all data in an AES-256-GCM encrypted tunnel to the receiving Vajra instance.</p>
+      </div>
+      <div class="panel-accent rounded p-8">
+        <div class="mono uppercase text-zinc-600 mb-5" style="font-size:11px;letter-spacing:0.22em">Step_03</div>
+        <i data-lucide="server" class="accent mb-5" style="width:28px;height:28px"></i>
+        <h3 class="text-white font-bold uppercase italic tracking-tight mb-3" style="font-size:15px">Backend Receives Safely</h3>
+        <p style="font-size:14px;line-height:1.8" class="text-muted">Receiving Vajra decrypts and delivers plaintext to the backend on localhost. Backend has zero awareness of the encryption layer.</p>
+      </div>
+    </div>
+
 
   </div>
 </section>
 
-<section class="py-20 px-6 section-divider">
+<section class="py-24 px-6 section-divider section-alt">
   <div class="max-w-6xl mx-auto">
     <div class="eyebrow">Security Guarantee</div>
     <h2 class="section-title">Two Locks.<br>Neither Enough Alone.</h2>
@@ -323,7 +252,7 @@
   </div>
 </section>
 
-<section class="py-20 px-6" style="background:rgba(255,255,255,0.01)">
+<section class="py-24 px-6 section-divider section-main">
   <div class="max-w-6xl mx-auto">
     <div class="eyebrow">Deployment Profiles</div>
     <h2 class="section-title">One Product.<br>Three Theatres.</h2>
@@ -353,7 +282,7 @@
   </div>
 </section>
 
-<section class="py-20 px-6 section-divider">
+<section class="py-24 px-6 section-divider section-alt">
   <div class="max-w-6xl mx-auto">
     <div class="eyebrow">Compliance Targets</div>
     <h2 class="section-title">Built for<br>Certification.</h2>

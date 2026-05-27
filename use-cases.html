@@ -60,7 +60,51 @@
   </div>
 </section>
 
-<section class="py-20 px-6 section-divider">
+<!-- Credibility strip -->
+<div class="cred-strip">
+  <div class="max-w-6xl mx-auto px-6 flex flex-wrap items-center justify-center gap-8 md:gap-12">
+    <div class="cred-item"><div class="pulse-dot"></div>iDEX Open Challenge 2026</div>
+    <div class="cred-item"><div class="pulse-dot" style="background:#3f3f46"></div>NIST FIPS 203 / 204 Aligned</div>
+    <div class="cred-item"><div class="pulse-dot" style="background:#3f3f46"></div>100% Indigenous Codebase</div>
+  </div>
+</div>
+
+<!-- Sector overview -->
+<section class="py-20 px-6 section-divider section-alt">
+  <div class="max-w-6xl mx-auto">
+    <div class="eyebrow">Who We Serve</div>
+    <h2 class="section-title">Four Sectors.<br>One Solution.</h2>
+    <p class="section-body mb-10">Every organisation transmitting data today that must stay confidential for the next 10–20 years is a Vajra customer. Jump to your sector:</p>
+    <div class="grid md:grid-cols-4 gap-4">
+      <a href="#defence" class="panel rounded p-6 flex flex-col gap-3" style="text-decoration:none">
+        <div><i data-lucide="shield" class="accent" style="width:24px;height:24px"></i></div>
+        <div class="text-white font-bold uppercase italic tracking-tight" style="font-size:14px">Defence</div>
+        <p class="text-muted" style="font-size:13px;line-height:1.7">HF radios, VSAT, SDRs, drone data links — 8,000+ assets at risk</p>
+        <div class="mono uppercase text-zinc-600 mt-auto" style="font-size:10px;letter-spacing:0.2em">Armed Forces · BEL · ECIL →</div>
+      </a>
+      <a href="#banking" class="panel rounded p-6 flex flex-col gap-3" style="text-decoration:none;border-color:rgba(185,28,28,0.2)">
+        <div><i data-lucide="landmark" class="accent" style="width:24px;height:24px"></i></div>
+        <div class="text-white font-bold uppercase italic tracking-tight" style="font-size:14px">Banking &amp; BFSI</div>
+        <p class="text-muted" style="font-size:13px;line-height:1.7">SWIFT gateways, RTGS, UPI switches, CBS — 800+ nodes exposed</p>
+        <div class="mono uppercase text-zinc-600 mt-auto" style="font-size:10px;letter-spacing:0.2em">Banks · NBFCs · NPCI →</div>
+      </a>
+      <a href="#government" class="panel rounded p-6 flex flex-col gap-3" style="text-decoration:none">
+        <div><i data-lucide="flag" class="accent" style="width:24px;height:24px"></i></div>
+        <div class="text-white font-bold uppercase italic tracking-tight" style="font-size:14px">Government</div>
+        <p class="text-muted" style="font-size:13px;line-height:1.7">NIC infrastructure, ministry comms, G2G gateways — sovereign keys only</p>
+        <div class="mono uppercase text-zinc-600 mt-auto" style="font-size:10px;letter-spacing:0.2em">MeitY · NIC · State Govt →</div>
+      </a>
+      <a href="#telecom" class="panel rounded p-6 flex flex-col gap-3" style="text-decoration:none">
+        <div><i data-lucide="radio" class="accent" style="width:24px;height:24px"></i></div>
+        <div class="text-white font-bold uppercase italic tracking-tight" style="font-size:14px">Telecom</div>
+        <p class="text-muted" style="font-size:13px;line-height:1.7">5G edge nodes, network slicing, C-DOT infrastructure — roadmap 2026</p>
+        <div class="mono uppercase text-zinc-600 mt-auto" style="font-size:10px;letter-spacing:0.2em">C-DOT · BSNL · Jio →</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="defence" class="py-20 px-6 section-divider section-main">
   <div class="max-w-6xl mx-auto">
     <div class="eyebrow">Use Case 01</div>
     <div class="grid md:grid-cols-2 gap-12 items-start mt-6">
@@ -93,10 +137,67 @@
         <div class="mono uppercase text-zinc-600 mt-6" style="font-size:10px;letter-spacing:0.2em">Target customers: Armed Forces, BEL, ECIL, DRDO</div>
       </div>
     </div>
+    <div class="mt-12 panel rounded" style="padding:28px 24px 24px;overflow-x:auto">
+      <div class="eyebrow mb-5">Deployment — Tactical Edge</div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 220"
+           style="width:100%;min-width:560px;display:block"
+           role="img" aria-label="Vajra tactical deployment: HF Radio to Bharat-Pi Vajra sidecar encrypted to base station to command network">
+        <text x="440" y="22" text-anchor="middle" font-family="IBM Plex Mono,Courier New,monospace" font-size="10" font-weight="700" letter-spacing="3" fill="#3f3f46">TACTICAL EDGE — FORWARD DEPLOYMENT TO BASE STATION</text>
+        <line x1="28" y1="182" x2="852" y2="182" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+        <line x1="240" y1="194" x2="276" y2="194" stroke="#52525b" stroke-width="2"/>
+        <polygon points="276,189 286,194 276,199" fill="#52525b"/>
+        <text x="296" y="198" font-family="IBM Plex Mono,Courier New,monospace" font-size="9" font-weight="700" letter-spacing="1.5" fill="#52525b">PLAIN — UNCHANGED</text>
+        <line x1="480" y1="194" x2="516" y2="194" stroke="#b91c1c" stroke-width="2.5" stroke-dasharray="5 3"/>
+        <polygon points="516,189 526,194 516,199" fill="#b91c1c"/>
+        <text x="536" y="198" font-family="IBM Plex Mono,Courier New,monospace" font-size="9" font-weight="700" letter-spacing="1.5" fill="#b91c1c">QUANTUM-SAFE ENCRYPTED</text>
+        <rect x="28" y="44" width="155" height="108" rx="7" fill="rgba(255,255,255,0.03)" stroke="#3f3f46" stroke-width="1.5"/>
+        <text x="105" y="64" text-anchor="middle" font-family="IBM Plex Mono,Courier New,monospace" font-size="9" font-weight="700" letter-spacing="2" fill="#52525b">LEGACY RADIO</text>
+        <line x1="42" y1="71" x2="169" y2="71" stroke="#3f3f46" stroke-width="0.7"/>
+        <text x="105" y="96" text-anchor="middle" font-family="Barlow Condensed,system-ui,sans-serif" font-size="18" font-weight="700" fill="#ffffff">HF Radio</text>
+        <text x="105" y="112" text-anchor="middle" font-family="IBM Plex Mono,Courier New,monospace" font-size="9" fill="#52525b">No firmware change</text>
+        <rect x="63" y="124" width="84" height="14" rx="3" fill="rgba(255,255,255,0.03)" stroke="#3f3f46" stroke-width="1"/>
+        <text x="105" y="135" text-anchor="middle" font-family="IBM Plex Mono,Courier New,monospace" font-size="8" font-weight="700" letter-spacing="1.5" fill="#3f3f46">UNCHANGED</text>
+        <line x1="183" y1="98" x2="211" y2="98" stroke="#52525b" stroke-width="2"/>
+        <polygon points="211,93 221,98 211,103" fill="#52525b"/>
+        <text x="202" y="116" text-anchor="middle" font-family="IBM Plex Mono,Courier New,monospace" font-size="9" font-weight="700" letter-spacing="1.5" fill="#52525b">ETHERNET</text>
+        <rect x="218" y="40" width="161" height="116" rx="9" fill="none" stroke="rgba(185,28,28,0.22)" stroke-width="2.5"/>
+        <rect x="221" y="44" width="155" height="108" rx="7" fill="rgba(185,28,28,0.13)" stroke="#b91c1c" stroke-width="1.8"/>
+        <text x="299" y="64" text-anchor="middle" font-family="IBM Plex Mono,Courier New,monospace" font-size="9" font-weight="700" letter-spacing="2" fill="#b91c1c">VAJRA SIDECAR</text>
+        <line x1="235" y1="71" x2="362" y2="71" stroke="rgba(185,28,28,0.3)" stroke-width="0.7"/>
+        <text x="299" y="94" text-anchor="middle" font-family="Barlow Condensed,system-ui,sans-serif" font-size="18" font-weight="700" fill="#ffffff">Bharat-Pi</text>
+        <text x="299" y="110" text-anchor="middle" font-family="IBM Plex Mono,Courier New,monospace" font-size="9" fill="#9ca3af">ARM Cortex-A55</text>
+        <text x="299" y="123" text-anchor="middle" font-family="IBM Plex Mono,Courier New,monospace" font-size="9" fill="#9ca3af">64MB · Air-gap</text>
+        <rect x="259" y="134" width="80" height="10" rx="2" fill="rgba(185,28,28,0.25)"/>
+        <text x="299" y="143" text-anchor="middle" font-family="IBM Plex Mono,Courier New,monospace" font-size="8" font-weight="700" letter-spacing="1.5" fill="#b91c1c">ENCRYPTS</text>
+        <text x="430" y="84" text-anchor="middle" font-family="IBM Plex Mono,Courier New,monospace" font-size="9" font-weight="700" letter-spacing="2" fill="#b91c1c">ENCRYPTED</text>
+        <line x1="376" y1="98" x2="474" y2="98" stroke="#b91c1c" stroke-width="2.5" stroke-dasharray="6 4"/>
+        <polygon points="474,93 484,98 474,103" fill="#b91c1c"/>
+        <text x="430" y="116" text-anchor="middle" font-family="IBM Plex Mono,Courier New,monospace" font-size="9" fill="#7f1d1d">ML-KEM-768</text>
+        <rect x="481" y="40" width="161" height="116" rx="9" fill="none" stroke="rgba(185,28,28,0.22)" stroke-width="2.5"/>
+        <rect x="484" y="44" width="155" height="108" rx="7" fill="rgba(185,28,28,0.13)" stroke="#b91c1c" stroke-width="1.8"/>
+        <text x="562" y="64" text-anchor="middle" font-family="IBM Plex Mono,Courier New,monospace" font-size="9" font-weight="700" letter-spacing="2" fill="#b91c1c">VAJRA GATEWAY</text>
+        <line x1="498" y1="71" x2="625" y2="71" stroke="rgba(185,28,28,0.3)" stroke-width="0.7"/>
+        <text x="562" y="94" text-anchor="middle" font-family="Barlow Condensed,system-ui,sans-serif" font-size="18" font-weight="700" fill="#ffffff">Base Station</text>
+        <text x="562" y="110" text-anchor="middle" font-family="IBM Plex Mono,Courier New,monospace" font-size="9" fill="#9ca3af">Decapsulate</text>
+        <text x="562" y="123" text-anchor="middle" font-family="IBM Plex Mono,Courier New,monospace" font-size="9" fill="#9ca3af">ML-DSA-65 mTLS</text>
+        <rect x="522" y="134" width="80" height="10" rx="2" fill="rgba(185,28,28,0.25)"/>
+        <text x="562" y="143" text-anchor="middle" font-family="IBM Plex Mono,Courier New,monospace" font-size="8" font-weight="700" letter-spacing="1.5" fill="#b91c1c">DECRYPTS</text>
+        <line x1="639" y1="98" x2="667" y2="98" stroke="#52525b" stroke-width="2"/>
+        <polygon points="667,93 677,98 667,103" fill="#52525b"/>
+        <text x="658" y="116" text-anchor="middle" font-family="IBM Plex Mono,Courier New,monospace" font-size="9" font-weight="700" letter-spacing="1.5" fill="#52525b">ETHERNET</text>
+        <rect x="677" y="44" width="155" height="108" rx="7" fill="rgba(255,255,255,0.03)" stroke="#3f3f46" stroke-width="1.5"/>
+        <text x="754" y="64" text-anchor="middle" font-family="IBM Plex Mono,Courier New,monospace" font-size="9" font-weight="700" letter-spacing="2" fill="#52525b">C2 NETWORK</text>
+        <line x1="691" y1="71" x2="818" y2="71" stroke="#3f3f46" stroke-width="0.7"/>
+        <text x="754" y="96" text-anchor="middle" font-family="Barlow Condensed,system-ui,sans-serif" font-size="18" font-weight="700" fill="#ffffff">Command</text>
+        <text x="754" y="112" text-anchor="middle" font-family="IBM Plex Mono,Courier New,monospace" font-size="9" fill="#52525b">No app changes</text>
+        <rect x="712" y="124" width="84" height="14" rx="3" fill="rgba(255,255,255,0.03)" stroke="#3f3f46" stroke-width="1"/>
+        <text x="754" y="135" text-anchor="middle" font-family="IBM Plex Mono,Courier New,monospace" font-size="8" font-weight="700" letter-spacing="1.5" fill="#3f3f46">UNCHANGED</text>
+      </svg>
+    </div>
   </div>
 </section>
 
-<section class="py-20 px-6" style="background:rgba(255,255,255,0.01)">
+<section id="banking" class="py-20 px-6 section-divider section-alt">
   <div class="max-w-6xl mx-auto">
     <div class="eyebrow">Use Case 02</div>
     <div class="grid md:grid-cols-2 gap-12 items-start mt-6">
@@ -124,11 +225,69 @@
     </div>
         </div>
       </div>
+
+    </div>
+    <div class="mt-12 panel rounded" style="padding:28px 24px 24px;overflow-x:auto">
+      <div class="eyebrow mb-5">Deployment — Banking Core</div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 220"
+           style="width:100%;min-width:560px;display:block"
+           role="img" aria-label="Vajra banking deployment: CBS to Bank A Vajra node encrypted to Bank B NPCI Vajra node to SWIFT RTGS">
+        <text x="440" y="22" text-anchor="middle" font-family="IBM Plex Mono,Courier New,monospace" font-size="10" font-weight="700" letter-spacing="3" fill="#3f3f46">BANKING CORE — CBS TO SWIFT / RTGS GATEWAY</text>
+        <line x1="28" y1="182" x2="852" y2="182" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+        <line x1="240" y1="194" x2="276" y2="194" stroke="#52525b" stroke-width="2"/>
+        <polygon points="276,189 286,194 276,199" fill="#52525b"/>
+        <text x="296" y="198" font-family="IBM Plex Mono,Courier New,monospace" font-size="9" font-weight="700" letter-spacing="1.5" fill="#52525b">PLAIN — UNCHANGED</text>
+        <line x1="480" y1="194" x2="516" y2="194" stroke="#b91c1c" stroke-width="2.5" stroke-dasharray="5 3"/>
+        <polygon points="516,189 526,194 516,199" fill="#b91c1c"/>
+        <text x="536" y="198" font-family="IBM Plex Mono,Courier New,monospace" font-size="9" font-weight="700" letter-spacing="1.5" fill="#b91c1c">QUANTUM-SAFE ENCRYPTED</text>
+        <rect x="28" y="44" width="155" height="108" rx="7" fill="rgba(255,255,255,0.03)" stroke="#3f3f46" stroke-width="1.5"/>
+        <text x="105" y="64" text-anchor="middle" font-family="IBM Plex Mono,Courier New,monospace" font-size="9" font-weight="700" letter-spacing="2" fill="#52525b">CORE BANKING</text>
+        <line x1="42" y1="71" x2="169" y2="71" stroke="#3f3f46" stroke-width="0.7"/>
+        <text x="105" y="96" text-anchor="middle" font-family="Barlow Condensed,system-ui,sans-serif" font-size="18" font-weight="700" fill="#ffffff">CBS</text>
+        <text x="105" y="112" text-anchor="middle" font-family="IBM Plex Mono,Courier New,monospace" font-size="9" fill="#52525b">No code change</text>
+        <rect x="63" y="124" width="84" height="14" rx="3" fill="rgba(255,255,255,0.03)" stroke="#3f3f46" stroke-width="1"/>
+        <text x="105" y="135" text-anchor="middle" font-family="IBM Plex Mono,Courier New,monospace" font-size="8" font-weight="700" letter-spacing="1.5" fill="#3f3f46">UNCHANGED</text>
+        <line x1="183" y1="98" x2="211" y2="98" stroke="#52525b" stroke-width="2"/>
+        <polygon points="211,93 221,98 211,103" fill="#52525b"/>
+        <text x="202" y="116" text-anchor="middle" font-family="IBM Plex Mono,Courier New,monospace" font-size="9" font-weight="700" letter-spacing="1.5" fill="#52525b">PLAIN TCP</text>
+        <rect x="218" y="40" width="161" height="116" rx="9" fill="none" stroke="rgba(185,28,28,0.22)" stroke-width="2.5"/>
+        <rect x="221" y="44" width="155" height="108" rx="7" fill="rgba(185,28,28,0.13)" stroke="#b91c1c" stroke-width="1.8"/>
+        <text x="299" y="64" text-anchor="middle" font-family="IBM Plex Mono,Courier New,monospace" font-size="9" font-weight="700" letter-spacing="2" fill="#b91c1c">VAJRA — SENDER</text>
+        <line x1="235" y1="71" x2="362" y2="71" stroke="rgba(185,28,28,0.3)" stroke-width="0.7"/>
+        <text x="299" y="94" text-anchor="middle" font-family="Barlow Condensed,system-ui,sans-serif" font-size="18" font-weight="700" fill="#ffffff">Bank A Node</text>
+        <text x="299" y="110" text-anchor="middle" font-family="IBM Plex Mono,Courier New,monospace" font-size="9" fill="#9ca3af">2,000+ TPS</text>
+        <text x="299" y="123" text-anchor="middle" font-family="IBM Plex Mono,Courier New,monospace" font-size="9" fill="#9ca3af">OCI container</text>
+        <rect x="259" y="134" width="80" height="10" rx="2" fill="rgba(185,28,28,0.25)"/>
+        <text x="299" y="143" text-anchor="middle" font-family="IBM Plex Mono,Courier New,monospace" font-size="8" font-weight="700" letter-spacing="1.5" fill="#b91c1c">ENCRYPTS</text>
+        <text x="430" y="84" text-anchor="middle" font-family="IBM Plex Mono,Courier New,monospace" font-size="9" font-weight="700" letter-spacing="2" fill="#b91c1c">ENCRYPTED</text>
+        <line x1="376" y1="98" x2="474" y2="98" stroke="#b91c1c" stroke-width="2.5" stroke-dasharray="6 4"/>
+        <polygon points="474,93 484,98 474,103" fill="#b91c1c"/>
+        <text x="430" y="116" text-anchor="middle" font-family="IBM Plex Mono,Courier New,monospace" font-size="9" fill="#7f1d1d">SWIFT / RTGS</text>
+        <rect x="481" y="40" width="161" height="116" rx="9" fill="none" stroke="rgba(185,28,28,0.22)" stroke-width="2.5"/>
+        <rect x="484" y="44" width="155" height="108" rx="7" fill="rgba(185,28,28,0.13)" stroke="#b91c1c" stroke-width="1.8"/>
+        <text x="562" y="64" text-anchor="middle" font-family="IBM Plex Mono,Courier New,monospace" font-size="9" font-weight="700" letter-spacing="2" fill="#b91c1c">VAJRA — RECEIVER</text>
+        <line x1="498" y1="71" x2="625" y2="71" stroke="rgba(185,28,28,0.3)" stroke-width="0.7"/>
+        <text x="562" y="94" text-anchor="middle" font-family="Barlow Condensed,system-ui,sans-serif" font-size="18" font-weight="700" fill="#ffffff">Bank B / NPCI</text>
+        <text x="562" y="110" text-anchor="middle" font-family="IBM Plex Mono,Courier New,monospace" font-size="9" fill="#9ca3af">RBI aligned</text>
+        <text x="562" y="123" text-anchor="middle" font-family="IBM Plex Mono,Courier New,monospace" font-size="9" fill="#9ca3af">ML-DSA-65 mTLS</text>
+        <rect x="522" y="134" width="80" height="10" rx="2" fill="rgba(185,28,28,0.25)"/>
+        <text x="562" y="143" text-anchor="middle" font-family="IBM Plex Mono,Courier New,monospace" font-size="8" font-weight="700" letter-spacing="1.5" fill="#b91c1c">DECRYPTS</text>
+        <line x1="639" y1="98" x2="667" y2="98" stroke="#52525b" stroke-width="2"/>
+        <polygon points="667,93 677,98 667,103" fill="#52525b"/>
+        <text x="658" y="116" text-anchor="middle" font-family="IBM Plex Mono,Courier New,monospace" font-size="9" font-weight="700" letter-spacing="1.5" fill="#52525b">PLAIN TCP</text>
+        <rect x="677" y="44" width="155" height="108" rx="7" fill="rgba(255,255,255,0.03)" stroke="#3f3f46" stroke-width="1.5"/>
+        <text x="754" y="64" text-anchor="middle" font-family="IBM Plex Mono,Courier New,monospace" font-size="9" font-weight="700" letter-spacing="2" fill="#52525b">CORRESPONDENT</text>
+        <line x1="691" y1="71" x2="818" y2="71" stroke="#3f3f46" stroke-width="0.7"/>
+        <text x="754" y="96" text-anchor="middle" font-family="Barlow Condensed,system-ui,sans-serif" font-size="18" font-weight="700" fill="#ffffff">SWIFT / RTGS</text>
+        <text x="754" y="112" text-anchor="middle" font-family="IBM Plex Mono,Courier New,monospace" font-size="9" fill="#52525b">No API changes</text>
+        <rect x="712" y="124" width="84" height="14" rx="3" fill="rgba(255,255,255,0.03)" stroke="#3f3f46" stroke-width="1"/>
+        <text x="754" y="135" text-anchor="middle" font-family="IBM Plex Mono,Courier New,monospace" font-size="8" font-weight="700" letter-spacing="1.5" fill="#3f3f46">UNCHANGED</text>
+      </svg>
     </div>
   </div>
 </section>
 
-<section class="py-20 px-6 section-divider">
+<section id="government" class="py-20 px-6 section-divider section-main">
   <div class="max-w-6xl mx-auto">
     <div class="eyebrow">Use Case 03</div>
     <div class="grid md:grid-cols-2 gap-12 items-start mt-6">
@@ -164,7 +323,7 @@
   </div>
 </section>
 
-<section class="py-20 px-6" style="background:rgba(255,255,255,0.01)">
+<section id="telecom" class="py-20 px-6 section-divider section-alt">
   <div class="max-w-6xl mx-auto">
     <div class="eyebrow">Use Case 04</div>
     <div class="grid md:grid-cols-2 gap-12 items-start mt-6">

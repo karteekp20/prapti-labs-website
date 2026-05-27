@@ -40,7 +40,7 @@ body {
   background: rgba(12,12,14,0.92);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid rgba(148,163,184,0.10);
 }
 
 /* ---------- Panels / cards ---------- */
@@ -50,8 +50,8 @@ body {
   transition: border-color 0.25s ease, background 0.25s ease, transform 0.2s ease;
 }
 .panel:hover {
-  border-color: rgba(185,28,28,0.25);
-  background: rgba(255,255,255,0.05);
+  border-color: rgba(185,28,28,0.40);
+  background: rgba(255,255,255,0.055);
   transform: translateY(-1px);
 }
 .panel-accent {
@@ -150,8 +150,12 @@ body {
     radial-gradient(circle at 50% -10%, rgba(185,28,28,0.11) 0%, transparent 55%);
 }
 
-/* ---------- Section dividers ---------- */
+/* ---------- Section dividers + spacing ---------- */
 .section-divider { border-top: 1px solid var(--border); }
+
+/* Alternating section backgrounds — dark equivalent of QuSecure white/grey */
+.section-alt  { background: #0d0d10; }   /* 3-step lift from carbon */
+.section-main { background: var(--carbon); }
 
 /* ---------- Footer ---------- */
 .footer-bg { background: #08080a; border-top: 1px solid var(--border); }
@@ -189,6 +193,23 @@ body {
 }
 .spec-container .comment { color: var(--muted); }
 .spec-container .accent  { color: var(--red); }
+
+/* ---------- Credibility strip ---------- */
+.cred-strip {
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 18px 0;
+  background: rgba(255,255,255,0.015);
+}
+.cred-item {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: 'IBM Plex Mono', 'Courier New', monospace;
+  font-size: 11px; font-weight: 700;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  color: rgba(161,161,170,0.75);
+  white-space: nowrap;
+}
+.cred-item .dot { background: var(--red); }
 /* ---------- Focus styles (keyboard navigation / accessibility) ---------- */
 :focus-visible {
   outline: 2px solid var(--red);

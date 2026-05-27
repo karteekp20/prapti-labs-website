@@ -60,7 +60,7 @@
   </div>
 </section>
 
-<section class="py-20 px-6 section-divider">
+<section class="py-24 px-6 section-divider section-alt">
   <div class="max-w-6xl mx-auto">
     <div class="eyebrow">Architecture Layers</div>
     <h2 class="section-title">Four Isolated<br>Layers.</h2>
@@ -135,10 +135,94 @@
       </div>
 
     </div>
+
+    <!-- Four-layer architecture diagram -->
+    <div class="mt-12 panel rounded" style="padding:28px 24px 28px;overflow-x:auto">
+      <div class="eyebrow mb-5">Architecture — Four Isolated Layers</div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 290"
+           style="width:100%;min-width:560px;display:block"
+           role="img" aria-label="Vajra four-layer architecture: Data Plane, Control Plane, Key Management, Observability">
+
+        <text x="480" y="22" text-anchor="middle"
+              font-family="IBM Plex Mono,Courier New,monospace"
+              font-size="10" font-weight="700" letter-spacing="3" fill="#3f3f46">VAJRA FOUR-LAYER ARCHITECTURE — ISOLATED CONCERNS</text>
+
+        <!-- External column header -->
+        <text x="806" y="36" text-anchor="middle"
+              font-family="IBM Plex Mono,Courier New,monospace"
+              font-size="9" font-weight="700" letter-spacing="2" fill="#52525b">EXTERNAL INTERFACES</text>
+
+        <rect x="28" y="36" width="620" height="58" rx="7" fill="rgba(185,28,28,0.15)" stroke="#b91c1c" stroke-width="1.8"/>
+        <rect x="28" y="36" width="4" height="58" rx="2" fill="#b91c1c"/>
+        <text x="46" y="54" font-family="IBM Plex Mono,Courier New,monospace" font-size="9" font-weight="700" letter-spacing="2.5" fill="#b91c1c">LAYER 01 — DATA PLANE</text>
+        <text x="46" y="73" font-family="Barlow Condensed,system-ui,sans-serif" font-size="20" font-weight="700" fill="#ffffff">Rust + Tokio + Hyper</text>
+        <text x="46" y="89" font-family="IBM Plex Mono,Courier New,monospace" font-size="9" fill="#9ca3af">TCP interception · Hybrid KEM handshake · AES-256-GCM session cipher · Sub-2ms target</text>
+
+        <line x1="648" y1="65" x2="680" y2="65" stroke="#3f3f46" stroke-width="1" stroke-dasharray="3 2"/>
+        <rect x="680" y="40" width="252" height="50" rx="4" fill="rgba(255,255,255,0.025)" stroke="#3f3f46" stroke-width="1"/>
+        <text x="806" y="69" text-anchor="middle" font-family="IBM Plex Mono,Courier New,monospace" font-size="9" fill="#52525b">Legacy TCP in / out</text>
+
+        <!-- Interface connector L1→L2: policy reload -->
+        <line x1="108" y1="94" x2="108" y2="102"
+              stroke="#3f3f46" stroke-width="1" stroke-dasharray="3 2"/>
+        <polygon points="104,96 108,102 112,96" fill="#3f3f46"/>
+        <text x="118" y="104" font-family="IBM Plex Mono,Courier New,monospace"
+              font-size="8" fill="#52525b">policy · reload</text>
+
+        <rect x="28" y="102" width="620" height="58" rx="7" fill="rgba(255,255,255,0.035)" stroke="rgba(185,28,28,0.5)" stroke-width="1.8"/>
+        <rect x="28" y="102" width="4" height="58" rx="2" fill="rgba(185,28,28,0.5)"/>
+        <text x="46" y="120" font-family="IBM Plex Mono,Courier New,monospace" font-size="9" font-weight="700" letter-spacing="2.5" fill="rgba(185,28,28,0.5)">LAYER 02 — CONTROL PLANE</text>
+        <text x="46" y="139" font-family="Barlow Condensed,system-ui,sans-serif" font-size="20" font-weight="700" fill="#ffffff">Crypto-Agility Engine</text>
+        <text x="46" y="155" font-family="IBM Plex Mono,Courier New,monospace" font-size="9" fill="#9ca3af">gRPC + etcd · Algorithm hot-swap · ML-DSA-65 PKI · Zero-downtime reload</text>
+
+        <line x1="648" y1="131" x2="680" y2="131" stroke="#3f3f46" stroke-width="1" stroke-dasharray="3 2"/>
+        <rect x="680" y="106" width="252" height="50" rx="4" fill="rgba(255,255,255,0.025)" stroke="#3f3f46" stroke-width="1"/>
+        <text x="806" y="135" text-anchor="middle" font-family="IBM Plex Mono,Courier New,monospace" font-size="9" fill="#52525b">gRPC management API</text>
+
+        <!-- Interface connector L2→L3: PKCS#11 -->
+        <line x1="108" y1="160" x2="108" y2="168"
+              stroke="#3f3f46" stroke-width="1" stroke-dasharray="3 2"/>
+        <polygon points="104,162 108,168 112,162" fill="#3f3f46"/>
+        <text x="118" y="170" font-family="IBM Plex Mono,Courier New,monospace"
+              font-size="8" fill="#52525b">PKCS#11 · key ops</text>
+
+        <rect x="28" y="168" width="620" height="58" rx="7" fill="rgba(255,255,255,0.035)" stroke="rgba(185,28,28,0.5)" stroke-width="1.8"/>
+        <rect x="28" y="168" width="4" height="58" rx="2" fill="rgba(185,28,28,0.5)"/>
+        <text x="46" y="186" font-family="IBM Plex Mono,Courier New,monospace" font-size="9" font-weight="700" letter-spacing="2.5" fill="rgba(185,28,28,0.5)">LAYER 03 — KEY MANAGEMENT</text>
+        <text x="46" y="205" font-family="Barlow Condensed,system-ui,sans-serif" font-size="20" font-weight="700" fill="#ffffff">Sovereign KMS</text>
+        <text x="46" y="221" font-family="IBM Plex Mono,Courier New,monospace" font-size="9" fill="#9ca3af">PKCS#11 HSM / TPM · Air-gap USB provisioner · On-prem only · Indian key jurisdiction</text>
+
+        <line x1="648" y1="197" x2="680" y2="197" stroke="#3f3f46" stroke-width="1" stroke-dasharray="3 2"/>
+        <rect x="680" y="172" width="252" height="50" rx="4" fill="rgba(255,255,255,0.025)" stroke="#3f3f46" stroke-width="1"/>
+        <text x="806" y="201" text-anchor="middle" font-family="IBM Plex Mono,Courier New,monospace" font-size="9" fill="#52525b">HSM / TPM (PKCS#11)</text>
+
+        <!-- Interface connector L3→L4: OTel -->
+        <line x1="108" y1="226" x2="108" y2="234"
+              stroke="#3f3f46" stroke-width="1" stroke-dasharray="3 2"/>
+        <polygon points="104,228 108,234 112,228" fill="#3f3f46"/>
+        <text x="118" y="236" font-family="IBM Plex Mono,Courier New,monospace"
+              font-size="8" fill="#52525b">OTel · metrics</text>
+
+        <!-- Layer 04: Observability (thinner) -->
+        <rect x="28" y="234" width="620" height="34" rx="6"
+              fill="rgba(255,255,255,0.02)" stroke="#3f3f46" stroke-width="1"/>
+        <rect x="28" y="234" width="4" height="34" rx="2" fill="#3f3f46"/>
+        <text x="46" y="248" font-family="IBM Plex Mono,Courier New,monospace"
+              font-size="9" font-weight="700" letter-spacing="2.5" fill="#52525b">LAYER 04 — OBSERVABILITY</text>
+        <text x="46" y="262" font-family="IBM Plex Mono,Courier New,monospace"
+              font-size="9" fill="#52525b">OpenTelemetry · Hash-chained audit log (EAL 4+) · SIEM syslog / CEF</text>
+
+        <line x1="648" y1="251" x2="680" y2="251" stroke="#3f3f46" stroke-width="1" stroke-dasharray="3 2"/>
+        <rect x="680" y="236" width="252" height="30" rx="4" fill="rgba(255,255,255,0.025)" stroke="#3f3f46" stroke-width="1"/>
+        <text x="806" y="255" text-anchor="middle" font-family="IBM Plex Mono,Courier New,monospace" font-size="9" fill="#52525b">SIEM / syslog / CEF</text>
+
+      </svg>
+    </div>
+
   </div>
 </section>
 
-<section class="py-20 px-6" style="background:rgba(255,255,255,0.01)">
+<section class="py-24 px-6 section-divider section-main">
   <div class="max-w-6xl mx-auto">
     <div class="eyebrow">Cryptographic Standards</div>
     <h2 class="section-title">NIST Final.<br>No Drafts.</h2>
