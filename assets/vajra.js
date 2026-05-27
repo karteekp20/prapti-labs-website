@@ -32,13 +32,14 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-  /* ── Typewriter effect (index page only) ── */
+  /* ── Typewriter effect — system status console (decorative, non-blocking) ── */
+  /* Main H1 headline is static HTML — this only animates the terminal badge */
   const typeTarget = document.getElementById('typewriter');
   if (typeTarget) {
     const lines = [
-      '> INIT_VAJRA // POST_QUANTUM_ACTIVE //',
-      '> SOVEREIGNTY_PROTOCOL: ENGAGED //',
-      '> HNDL_DEFENCE: ARMED //',
+      '> CRATE_INIT: oqs v0.10 // COMPLIANT',
+      '> HANDSHAKE_ENGINE: ML-KEM-768 + X25519 ACTIVE',
+      '> PROTOCOL_STATUS: QUANTUM_SECURE //',
     ];
     let lineIdx = 0, charIdx = 0;
     typeTarget.textContent = '';
@@ -48,14 +49,14 @@ document.addEventListener('DOMContentLoaded', function () {
       const line = lines[lineIdx];
       if (charIdx < line.length) {
         typeTarget.textContent += line[charIdx++];
-        setTimeout(type, 48);
+        setTimeout(type, 35);
       } else {
         setTimeout(() => {
           typeTarget.textContent = '';
           charIdx = 0;
           lineIdx = (lineIdx + 1) % lines.length;
           type();
-        }, 2400);
+        }, 3000);
       }
     }
     setTimeout(type, 600);

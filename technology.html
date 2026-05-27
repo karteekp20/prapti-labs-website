@@ -90,7 +90,7 @@
           <div class="text-muted mt-1" style="font-size:10px">Command Centre</div>
         </div>
         <div class="md:col-span-3">
-          <p style="font-size:14px;line-height:1.8" class="text-muted mb-3">Crypto-agility manager for hot-swapping algorithms without downtime. PKI bridge for ML-DSA Dilithium quantum-safe certificates. Policy config via gRPC and etcd.</p>
+          <p style="font-size:14px;line-height:1.8" class="text-muted mb-3">Crypto-agility manager for hot-swapping algorithms without downtime. PKI bridge for ML-DSA-65 (FIPS 204) quantum-safe certificates. Policy config via gRPC and etcd.</p>
           <div class="flex flex-wrap gap-2">
             <span class="border border-white/10 rounded px-2 py-1 mono uppercase text-zinc-500" style="font-size:11px;letter-spacing:0.08em">gRPC</span>
             <span class="border border-white/10 rounded px-2 py-1 mono uppercase text-zinc-500" style="font-size:11px;letter-spacing:0.08em">etcd</span>
@@ -109,10 +109,10 @@
         <div class="md:col-span-3">
           <p style="font-size:14px;line-height:1.8" class="text-muted mb-3">Sovereign on-premise KMS — key generation, rotation, revocation. PKCS#11 HSM/TPM abstraction for hardware-backed key storage. Air-gap USB provisioner for disconnected tactical deployments.</p>
           <div class="flex flex-wrap gap-2">
-            <span class="border rounded px-2 py-1 mono uppercase text-zinc-500" style="font-size:9px;letter-spacing:0.1em;border-color:rgba(185,28,28,0.3)">PKCS#11</span>
-            <span class="border rounded px-2 py-1 mono uppercase text-zinc-500" style="font-size:9px;letter-spacing:0.1em;border-color:rgba(185,28,28,0.3)">HSM / TPM</span>
-            <span class="border rounded px-2 py-1 mono uppercase text-zinc-500" style="font-size:9px;letter-spacing:0.1em;border-color:rgba(185,28,28,0.3)">Air-gap USB</span>
-            <span class="border rounded px-2 py-1 mono uppercase text-zinc-500" style="font-size:9px;letter-spacing:0.1em;border-color:rgba(185,28,28,0.3)">On-prem only</span>
+            <span class="border rounded px-2 py-1 mono uppercase text-zinc-500" style="font-size:11px;letter-spacing:0.1em;border-color:rgba(185,28,28,0.3)">PKCS#11</span>
+            <span class="border rounded px-2 py-1 mono uppercase text-zinc-500" style="font-size:11px;letter-spacing:0.1em;border-color:rgba(185,28,28,0.3)">HSM / TPM</span>
+            <span class="border rounded px-2 py-1 mono uppercase text-zinc-500" style="font-size:11px;letter-spacing:0.1em;border-color:rgba(185,28,28,0.3)">Air-gap USB</span>
+            <span class="border rounded px-2 py-1 mono uppercase text-zinc-500" style="font-size:11px;letter-spacing:0.1em;border-color:rgba(185,28,28,0.3)">On-prem only</span>
           </div>
         </div>
       </div>
@@ -145,7 +145,15 @@
     <div class="grid md:grid-cols-2 gap-12 mt-10">
       <div class="panel-accent rounded p-8">
         <div class="eyebrow mb-4">Full Stack</div>
-        <div class="spec-row"><span>PQC KEM</span><span>ML-KEM-768 — NIST FIPS 203</span></div><div class="spec-row"><span>Standard date</span><span class="spec-accent">August 2024 final</span></div><div class="spec-row"><span>PQC signatures</span><span>ML-DSA Dilithium — FIPS 204</span></div><div class="spec-row"><span>Classical KEM</span><span>X25519 — RFC 7748</span></div><div class="spec-row"><span>Key derivation</span><span>HKDF-SHA384 — RFC 5869</span></div><div class="spec-row"><span>Symmetric</span><span>AES-256-GCM — NIST SP 800-38D</span></div><div class="spec-row"><span>Key zeroization</span><span class="spec-accent">Rust zeroize crate</span></div>
+        <div class="spec-container mt-2">
+          <div class="spec-row"><span>PQC KEM</span><span>ML-KEM-768 — NIST FIPS 203</span></div>
+          <div class="spec-row"><span>Standard date</span><span class="spec-accent">August 2024 final</span></div>
+          <div class="spec-row"><span>PQC signatures</span><span>ML-DSA-65 — NIST FIPS 204</span></div>
+          <div class="spec-row"><span>Classical KEM</span><span>X25519 — RFC 7748</span></div>
+          <div class="spec-row"><span>Key derivation</span><span>HKDF-SHA384 — RFC 5869</span></div>
+          <div class="spec-row"><span>Symmetric</span><span>AES-256-GCM — NIST SP 800-38D</span></div>
+          <div class="spec-row"><span>Key zeroization</span><span class="spec-accent">Rust zeroize crate</span></div>
+        </div>
       </div>
       <div>
         <div class="eyebrow mb-4">Why Rust</div>

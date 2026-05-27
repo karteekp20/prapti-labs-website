@@ -100,6 +100,191 @@
         <p style="font-size:14px;line-height:1.8" class="text-muted">Receiving Vajra decrypts and delivers plaintext to the backend on localhost. Backend has zero awareness of the encryption layer.</p>
       </div>
     </div>
+
+    <!-- Network flow diagram — rebuilt full-width SVG -->
+    <div class="mt-14">
+      <div class="eyebrow mb-6">Network Flow</div>
+      <div class="panel rounded" style="padding:32px 24px 28px;overflow-x:auto">
+
+        <!-- Full-width SVG diagram — readable at all viewport widths -->
+        <svg xmlns="http://www.w3.org/2000/svg"
+             viewBox="0 0 980 240"
+             style="width:100%;min-width:600px;display:block"
+             role="img"
+             aria-label="Vajra network flow: Legacy device sends plain TCP to Vajra-A Initiator which encrypts and sends quantum-safe tunnel to Vajra-B Responder which decrypts and delivers plain TCP to the Backend Service">
+
+          <!-- ── Title ── -->
+          <text x="490" y="22" text-anchor="middle"
+                font-family="IBM Plex Mono,Courier New,monospace"
+                font-size="10" font-weight="700" letter-spacing="3" fill="#3f3f46">
+            VAJRA TRANSPARENT SIDECAR — WIRE-LEVEL VIEW
+          </text>
+
+          <!-- ════════════════════════════════════════
+               BOX 1: Legacy Device  x=28 cx=107
+               ════════════════════════════════════════ -->
+          <rect x="28" y="48" width="158" height="122" rx="8"
+                fill="rgba(255,255,255,0.03)" stroke="#3f3f46" stroke-width="1.5"/>
+          <text x="107" y="74" text-anchor="middle"
+                font-family="IBM Plex Mono,Courier New,monospace"
+                font-size="9" font-weight="700" letter-spacing="2.5" fill="#52525b">LEGACY DEVICE</text>
+          <line x1="48" y1="82" x2="166" y2="82" stroke="#3f3f46" stroke-width="0.8"/>
+          <text x="107" y="105" text-anchor="middle"
+                font-family="Barlow Condensed,system-ui,sans-serif"
+                font-size="26" font-weight="700" fill="#ffffff">HF Radio</text>
+          <text x="107" y="126" text-anchor="middle"
+                font-family="IBM Plex Mono,Courier New,monospace"
+                font-size="10" letter-spacing="1" fill="#52525b">No changes</text>
+          <rect x="57" y="138" width="100" height="18" rx="3"
+                fill="rgba(255,255,255,0.03)" stroke="#3f3f46" stroke-width="1"/>
+          <text x="107" y="151" text-anchor="middle"
+                font-family="IBM Plex Mono,Courier New,monospace"
+                font-size="9" font-weight="700" letter-spacing="1.5" fill="#3f3f46">UNCHANGED</text>
+
+          <!-- ════════════════════════════════════════
+               ARROW 1: Plain TCP  186→230
+               ════════════════════════════════════════ -->
+          <line x1="186" y1="109" x2="219" y2="109"
+                stroke="#52525b" stroke-width="2"/>
+          <polygon points="219,104 230,109 219,114" fill="#52525b"/>
+          <text x="208" y="127" text-anchor="middle"
+                font-family="IBM Plex Mono,Courier New,monospace"
+                font-size="9" font-weight="700" letter-spacing="1.5" fill="#52525b">PLAIN TCP</text>
+
+          <!-- ════════════════════════════════════════
+               BOX 2: Vajra-A Initiator  x=230 cx=309
+               ════════════════════════════════════════ -->
+          <!-- outer glow -->
+          <rect x="226" y="44" width="166" height="130" rx="10"
+                fill="none" stroke="rgba(185,28,28,0.25)" stroke-width="3"/>
+          <!-- main box -->
+          <rect x="230" y="48" width="158" height="122" rx="8"
+                fill="rgba(185,28,28,0.13)" stroke="#b91c1c" stroke-width="2"/>
+          <text x="309" y="70" text-anchor="middle"
+                font-family="IBM Plex Mono,Courier New,monospace"
+                font-size="9" font-weight="700" letter-spacing="2.5" fill="#b91c1c">VAJRA — A</text>
+          <line x1="250" y1="78" x2="368" y2="78" stroke="rgba(185,28,28,0.35)" stroke-width="1"/>
+          <text x="309" y="102" text-anchor="middle"
+                font-family="Barlow Condensed,system-ui,sans-serif"
+                font-size="28" font-weight="700" fill="#ffffff">Initiator</text>
+          <text x="309" y="122" text-anchor="middle"
+                font-family="IBM Plex Mono,Courier New,monospace"
+                font-size="10" letter-spacing="1" fill="#9ca3af">Hybrid KEM</text>
+          <text x="309" y="138" text-anchor="middle"
+                font-family="IBM Plex Mono,Courier New,monospace"
+                font-size="10" letter-spacing="1" fill="#9ca3af">X25519 + ML-KEM-768</text>
+          <rect x="259" y="150" width="100" height="12" rx="3"
+                fill="rgba(185,28,28,0.25)"/>
+          <text x="309" y="160" text-anchor="middle"
+                font-family="IBM Plex Mono,Courier New,monospace"
+                font-size="9" font-weight="700" letter-spacing="2" fill="#b91c1c">ENCRYPTS</text>
+
+          <!-- ════════════════════════════════════════
+               ARROW 2: Encrypted tunnel  388→512
+               ════════════════════════════════════════ -->
+          <!-- tunnel zone background -->
+          <rect x="392" y="82" width="116" height="54" rx="6"
+                fill="rgba(185,28,28,0.07)" stroke="rgba(185,28,28,0.2)" stroke-width="1"/>
+          <text x="450" y="96" text-anchor="middle"
+                font-family="IBM Plex Mono,Courier New,monospace"
+                font-size="10" font-weight="700" letter-spacing="2" fill="#b91c1c">ENCRYPTED</text>
+          <!-- dashed line: starts right at box2 edge, ends right at box3 left edge -->
+          <line x1="388" y1="109" x2="504" y2="109"
+                stroke="#b91c1c" stroke-width="2.5" stroke-dasharray="6 4"/>
+          <!-- arrowhead tip exactly touches box3 at x=512 -->
+          <polygon points="504,103 516,109 504,115" fill="#b91c1c"/>
+          <text x="450" y="124" text-anchor="middle"
+                font-family="IBM Plex Mono,Courier New,monospace"
+                font-size="9" letter-spacing="1" fill="#7f1d1d">AES-256-GCM</text>
+
+          <!-- ════════════════════════════════════════
+               BOX 3: Vajra-B Responder  x=512 cx=591
+               ════════════════════════════════════════ -->
+          <!-- outer glow -->
+          <rect x="508" y="44" width="166" height="130" rx="10"
+                fill="none" stroke="rgba(185,28,28,0.25)" stroke-width="3"/>
+          <!-- main box -->
+          <rect x="512" y="48" width="158" height="122" rx="8"
+                fill="rgba(185,28,28,0.13)" stroke="#b91c1c" stroke-width="2"/>
+          <text x="591" y="70" text-anchor="middle"
+                font-family="IBM Plex Mono,Courier New,monospace"
+                font-size="9" font-weight="700" letter-spacing="2.5" fill="#b91c1c">VAJRA — B</text>
+          <line x1="532" y1="78" x2="650" y2="78" stroke="rgba(185,28,28,0.35)" stroke-width="1"/>
+          <text x="591" y="102" text-anchor="middle"
+                font-family="Barlow Condensed,system-ui,sans-serif"
+                font-size="28" font-weight="700" fill="#ffffff">Responder</text>
+          <text x="591" y="122" text-anchor="middle"
+                font-family="IBM Plex Mono,Courier New,monospace"
+                font-size="10" letter-spacing="1" fill="#9ca3af">Decapsulate</text>
+          <text x="591" y="138" text-anchor="middle"
+                font-family="IBM Plex Mono,Courier New,monospace"
+                font-size="10" letter-spacing="1" fill="#9ca3af">HKDF-SHA384</text>
+          <rect x="541" y="150" width="100" height="12" rx="3"
+                fill="rgba(185,28,28,0.25)"/>
+          <text x="591" y="160" text-anchor="middle"
+                font-family="IBM Plex Mono,Courier New,monospace"
+                font-size="9" font-weight="700" letter-spacing="2" fill="#b91c1c">DECRYPTS</text>
+
+          <!-- ════════════════════════════════════════
+               ARROW 3: Plain TCP  670→714
+               ════════════════════════════════════════ -->
+          <line x1="670" y1="109" x2="703" y2="109"
+                stroke="#52525b" stroke-width="2"/>
+          <polygon points="703,104 714,109 703,114" fill="#52525b"/>
+          <text x="692" y="127" text-anchor="middle"
+                font-family="IBM Plex Mono,Courier New,monospace"
+                font-size="9" font-weight="700" letter-spacing="1.5" fill="#52525b">PLAIN TCP</text>
+
+          <!-- ════════════════════════════════════════
+               BOX 4: Backend Service  x=714 cx=793
+               ════════════════════════════════════════ -->
+          <rect x="714" y="48" width="158" height="122" rx="8"
+                fill="rgba(255,255,255,0.03)" stroke="#3f3f46" stroke-width="1.5"/>
+          <text x="793" y="74" text-anchor="middle"
+                font-family="IBM Plex Mono,Courier New,monospace"
+                font-size="9" font-weight="700" letter-spacing="2.5" fill="#52525b">BACKEND</text>
+          <line x1="734" y1="82" x2="852" y2="82" stroke="#3f3f46" stroke-width="0.8"/>
+          <text x="793" y="105" text-anchor="middle"
+                font-family="Barlow Condensed,system-ui,sans-serif"
+                font-size="26" font-weight="700" fill="#ffffff">Service</text>
+          <text x="793" y="126" text-anchor="middle"
+                font-family="IBM Plex Mono,Courier New,monospace"
+                font-size="10" letter-spacing="1" fill="#52525b">No changes</text>
+          <rect x="743" y="138" width="100" height="18" rx="3"
+                fill="rgba(255,255,255,0.03)" stroke="#3f3f46" stroke-width="1"/>
+          <text x="793" y="151" text-anchor="middle"
+                font-family="IBM Plex Mono,Courier New,monospace"
+                font-size="9" font-weight="700" letter-spacing="1.5" fill="#3f3f46">UNCHANGED</text>
+
+          <!-- ════════════════════════════════════════
+               LEGEND
+               ════════════════════════════════════════ -->
+          <line x1="28" y1="196" x2="952" y2="196"
+                stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+          <!-- item 1 -->
+          <line x1="250" y1="215" x2="295" y2="215"
+                stroke="#52525b" stroke-width="2"/>
+          <polygon points="295,210 304,215 295,220" fill="#52525b"/>
+          <text x="314" y="219" text-anchor="start"
+                font-family="IBM Plex Mono,Courier New,monospace"
+                font-size="10" font-weight="700" letter-spacing="1.5" fill="#52525b">
+            PLAIN — BOTH DEVICES UNCHANGED
+          </text>
+          <!-- item 2 -->
+          <line x1="558" y1="215" x2="603" y2="215"
+                stroke="#b91c1c" stroke-width="2.5" stroke-dasharray="5 3"/>
+          <polygon points="603,210 612,215 603,220" fill="#b91c1c"/>
+          <text x="622" y="219" text-anchor="start"
+                font-family="IBM Plex Mono,Courier New,monospace"
+                font-size="10" font-weight="700" letter-spacing="1.5" fill="#b91c1c">
+            QUANTUM-SAFE ENCRYPTED TUNNEL
+          </text>
+
+        </svg>
+
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -174,7 +359,7 @@
     <h2 class="section-title">Built for<br>Certification.</h2>
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mt-10">
       <div class="panel rounded p-6 flex items-start gap-4"><i data-lucide="check-circle" class="accent flex-shrink-0" style="width:16px;height:16px;margin-top:2px"></i><div><div class="text-white font-bold uppercase tracking-tight mb-1" style="font-size:12px">NIST FIPS 203</div><div style="font-size:10px;text-transform:uppercase;letter-spacing:0.1em;line-height:1.7" class="text-muted">ML-KEM-768 — August 2024 final standard</div></div></div>
-      <div class="panel rounded p-6 flex items-start gap-4"><i data-lucide="check-circle" class="accent flex-shrink-0" style="width:16px;height:16px;margin-top:2px"></i><div><div class="text-white font-bold uppercase tracking-tight mb-1" style="font-size:12px">NIST FIPS 204</div><div style="font-size:10px;text-transform:uppercase;letter-spacing:0.1em;line-height:1.7" class="text-muted">ML-DSA Dilithium — quantum-safe signatures</div></div></div>
+      <div class="panel rounded p-6 flex items-start gap-4"><i data-lucide="check-circle" class="accent flex-shrink-0" style="width:16px;height:16px;margin-top:2px"></i><div><div class="text-white font-bold uppercase tracking-tight mb-1" style="font-size:12px">NIST FIPS 204</div><div style="font-size:10px;text-transform:uppercase;letter-spacing:0.1em;line-height:1.7" class="text-muted">ML-DSA-65 (FIPS 204) — quantum-safe signatures</div></div></div>
       <div class="panel rounded p-6 flex items-start gap-4"><i data-lucide="clock" class="accent flex-shrink-0" style="width:16px;height:16px;margin-top:2px"></i><div><div class="text-white font-bold uppercase tracking-tight mb-1" style="font-size:12px">STQC Certification</div><div style="font-size:10px;text-transform:uppercase;letter-spacing:0.1em;line-height:1.7" class="text-muted">Target Milestone 7 — documentation from M1</div></div></div>
       <div class="panel rounded p-6 flex items-start gap-4"><i data-lucide="clock" class="accent flex-shrink-0" style="width:16px;height:16px;margin-top:2px"></i><div><div class="text-white font-bold uppercase tracking-tight mb-1" style="font-size:12px">Common Criteria EAL 4+</div><div style="font-size:10px;text-transform:uppercase;letter-spacing:0.1em;line-height:1.7" class="text-muted">Target evaluation assurance level for defence-grade</div></div></div>
       <div class="panel rounded p-6 flex items-start gap-4"><i data-lucide="check-circle" class="accent flex-shrink-0" style="width:16px;height:16px;margin-top:2px"></i><div><div class="text-white font-bold uppercase tracking-tight mb-1" style="font-size:12px">RBI Cyber Security Framework</div><div style="font-size:10px;text-transform:uppercase;letter-spacing:0.1em;line-height:1.7" class="text-muted">Enterprise Core profile — BFSI alignment</div></div></div>
